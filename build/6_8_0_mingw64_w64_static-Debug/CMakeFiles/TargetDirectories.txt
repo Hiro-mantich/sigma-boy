@@ -1,0 +1,9 @@
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/sigma-boy.dir
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/edit_cache.dir
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/rebuild_cache.dir
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/list_install_components.dir
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/install.dir
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/install/local.dir
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/install/strip.dir
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/sigma-boy_autogen_timestamp_deps.dir
+D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/sigma-boy_autogen.dir
