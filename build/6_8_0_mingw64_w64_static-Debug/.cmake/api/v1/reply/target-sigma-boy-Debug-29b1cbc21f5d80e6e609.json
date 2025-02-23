@@ -29,13 +29,16 @@
 		[
 			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
 			"CMakeLists.txt",
-			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
-			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
+			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6/Qt6Config.cmake",
+			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
 			"D:/SOFT/MSYS2/mingw64/share/cmake/Modules/CMakeFindDependencyMacro.cmake",
 			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
-			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
-			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6/Qt6Config.cmake"
+			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
+			"D:/SOFT/MSYS2/mingw64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake"
 		],
 		"nodes" : 
 		[
@@ -69,14 +72,14 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 59,
+				"line" : 60,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
-				"file" : 0,
-				"line" : 646,
-				"parent" : 2
+				"file" : 1,
+				"line" : 54,
+				"parent" : 0
 			},
 			{
 				"command" : 8,
@@ -85,66 +88,120 @@
 				"parent" : 0
 			},
 			{
-				"file" : 8,
+				"file" : 4,
 				"parent" : 7
 			},
 			{
 				"command" : 8,
-				"file" : 8,
+				"file" : 4,
 				"line" : 181,
 				"parent" : 8
 			},
 			{
-				"file" : 7,
+				"file" : 3,
 				"parent" : 9
 			},
 			{
 				"command" : 7,
-				"file" : 7,
-				"line" : 43,
+				"file" : 3,
+				"line" : 55,
 				"parent" : 10
 			},
 			{
-				"file" : 6,
-				"parent" : 11
-			},
-			{
-				"command" : 10,
-				"file" : 6,
-				"line" : 43,
-				"parent" : 12
-			},
-			{
-				"command" : 9,
-				"file" : 5,
-				"line" : 143,
-				"parent" : 13
-			},
-			{
-				"command" : 8,
-				"file" : 4,
-				"line" : 76,
-				"parent" : 14
-			},
-			{
-				"file" : 3,
-				"parent" : 15
-			},
-			{
-				"command" : 7,
-				"file" : 3,
-				"line" : 57,
-				"parent" : 16
-			},
-			{
 				"file" : 2,
-				"parent" : 17
+				"parent" : 11
 			},
 			{
 				"command" : 6,
 				"file" : 2,
 				"line" : 61,
+				"parent" : 12
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 43,
+				"parent" : 10
+			},
+			{
+				"file" : 9,
+				"parent" : 14
+			},
+			{
+				"command" : 10,
+				"file" : 9,
+				"line" : 43,
+				"parent" : 15
+			},
+			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 143,
+				"parent" : 16
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 17
+			},
+			{
+				"file" : 6,
 				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 6,
+				"line" : 55,
+				"parent" : 19
+			},
+			{
+				"file" : 5,
+				"parent" : 20
+			},
+			{
+				"command" : 6,
+				"file" : 5,
+				"line" : 61,
+				"parent" : 21
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 646,
+				"parent" : 2
+			},
+			{
+				"command" : 9,
+				"file" : 8,
+				"line" : 143,
+				"parent" : 16
+			},
+			{
+				"command" : 8,
+				"file" : 7,
+				"line" : 76,
+				"parent" : 24
+			},
+			{
+				"file" : 11,
+				"parent" : 25
+			},
+			{
+				"command" : 7,
+				"file" : 11,
+				"line" : 57,
+				"parent" : 26
+			},
+			{
+				"file" : 10,
+				"parent" : 27
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 61,
+				"parent" : 28
 			}
 		]
 	},
@@ -160,43 +217,55 @@
 			"defines" : 
 			[
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "MINGW_HAS_SECURE_API=1"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "QT_CORE_LIB"
 				},
 				{
 					"backtrace" : 6,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_SQL_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_WIDGETS_LIB"
+				},
+				{
+					"backtrace" : 23,
 					"define" : "UNICODE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "WIN32"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "WIN64"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "WINVER=0x0A00"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "_ENABLE_EXTENDED_ALIGNED_STORAGE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "_UNICODE"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "_WIN32_WINNT=0x0A00"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"define" : "_WIN64"
 				}
 			],
@@ -207,19 +276,34 @@
 					"path" : "D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/include"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"isSystem" : true,
 					"path" : "D:/SOFT/MSYS2/mingw64/include/qt6/QtCore"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"isSystem" : true,
 					"path" : "D:/SOFT/MSYS2/mingw64/include/qt6"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 23,
 					"isSystem" : true,
 					"path" : "D:/SOFT/MSYS2/mingw64/share/qt6/mkspecs/win32-g++"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/SOFT/MSYS2/mingw64/include/qt6/QtGui"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "D:/SOFT/MSYS2/mingw64/include/qt6/QtSql"
 				}
 			],
 			"language" : "CXX",
@@ -227,8 +311,8 @@
 			{
 				"backtraces" : 
 				[
-					6,
-					6
+					23,
+					23
 				],
 				"standard" : "17"
 			},
@@ -236,18 +320,19 @@
 			[
 				0,
 				1,
-				2
+				2,
+				6
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "sigma-boy_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "sigma-boy_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "sigma-boy_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "sigma-boy::@6890427a1f51a3e7e1df",
@@ -279,16 +364,56 @@
 			},
 			{
 				"backtrace" : 6,
+				"fragment" : "D:\\SOFT\\MSYS2\\mingw64\\lib\\libQt6Widgets.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "D:\\SOFT\\MSYS2\\mingw64\\lib\\libQt6Sql.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "D:\\SOFT\\MSYS2\\mingw64\\lib\\libsqlite3.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 13,
+				"fragment" : "D:\\SOFT\\MSYS2\\mingw64\\lib\\libQt6Gui.dll.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 22,
+				"fragment" : "-ld3d11",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 22,
+				"fragment" : "-ldxgi",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 22,
+				"fragment" : "-ldxguid",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 22,
+				"fragment" : "-ld3d12",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 23,
 				"fragment" : "D:\\SOFT\\MSYS2\\mingw64\\lib\\libQt6Core.dll.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 19,
+				"backtrace" : 29,
 				"fragment" : "-lmpr",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 19,
+				"backtrace" : 29,
 				"fragment" : "-luserenv",
 				"role" : "libraries"
 			},
@@ -314,7 +439,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				6
 			]
 		},
 		{
@@ -322,28 +448,31 @@
 			"sourceIndexes" : 
 			[
 				3,
-				5
+				5,
+				8,
+				9
 			]
 		},
 		{
 			"name" : "Forms",
 			"sourceIndexes" : 
 			[
-				4
+				4,
+				7
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				6
+				10
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				7
+				11
 			]
 		}
 	],
@@ -379,9 +508,31 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "add_workout.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "add_workout.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "add_workout.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/include/ui_mainwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/include/ui_add_workout.h",
 			"sourceGroupIndex" : 1
 		},
 		{

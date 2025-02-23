@@ -332,7 +332,9 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtransform.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qwindowdefs.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qwindowdefs_win.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QDialog \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QMainWindow \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qdialog.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qmainwindow.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qsizepolicy.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtabwidget.h \
@@ -596,6 +598,8 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/share/cmake/Modules/Platform/Windows.cmake \
 	D:/SOFT/MSYS2/mingw64/share/cmake/Modules/Platform/WindowsPaths.cmake \
 	D:/qt-project/sigma-boy/CMakeLists.txt \
+	D:/qt-project/sigma-boy/add_workout.cpp \
+	D:/qt-project/sigma-boy/add_workout.h \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/.qtc/package-manager/auto-setup.cmake \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/3.31.4/CMakeCXXCompiler.cmake \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/3.31.4/CMakeRCCompiler.cmake \
@@ -604,5 +608,6 @@ sigma-boy_autogen/timestamp: \
 	D:/qt-project/sigma-boy/main.cpp \
 	D:/qt-project/sigma-boy/mainwindow.cpp \
 	D:/qt-project/sigma-boy/mainwindow.h \
+	D:/qt-project/sigma-boy/add_workout.ui \
 	D:/qt-project/sigma-boy/mainwindow.ui \
 	D:/SOFT/MSYS2/mingw64/bin/cmake.exe

@@ -137,6 +137,19 @@
       <string>Добавить запись о тренировке</string>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>150</y>
+       <width>231</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Открыть окно</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -145,7 +158,7 @@
      <x>0</x>
      <y>0</y>
      <width>550</width>
-     <height>30</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

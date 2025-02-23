@@ -29,9 +29,8 @@ int main(int argc, char *argv[])
     QString createTableQuery = R"(
         CREATE TABLE IF NOT EXISTS trainings (
             date TEXT,
-            training_type TEXT,
             description TEXT,
-            exercise_complex TEXT
+            exercises TEXT
         )
     )";
 

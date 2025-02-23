@@ -44,6 +44,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(sigma-boy
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        add_workout.h add_workout.cpp add_workout.ui
     )
 else()
     add_executable(sigma-boy ${PROJECT_SOURCES})

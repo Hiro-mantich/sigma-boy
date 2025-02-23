@@ -17,6 +17,7 @@
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
 
@@ -32,6 +33,8 @@ public:
     QLabel *label_4;
     QFrame *frame_bot;
     QListWidget *listWidget_2;
+    QPushButton *pushButton;
+    QPushButton *pushButton_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -39,7 +42,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 775);
+        MainWindow->resize(550, 1050);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         frameCalendat = new QFrame(centralwidget);
@@ -72,10 +75,16 @@ public:
         listWidget_2->setAutoFillBackground(false);
         listWidget_2->setGridSize(QSize(0, 40));
         listWidget_2->setViewMode(QListView::ViewMode::ListMode);
+        pushButton = new QPushButton(frame_bot);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(380, 300, 131, 111));
+        pushButton_2 = new QPushButton(frame_bot);
+        pushButton_2->setObjectName("pushButton_2");
+        pushButton_2->setGeometry(QRect(150, 150, 231, 41));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 800, 30));
+        menubar->setGeometry(QRect(0, 0, 550, 26));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -102,6 +111,8 @@ public:
         ___qlistwidgetitem2->setText(QCoreApplication::translate("MainWindow", "3 \320\267\320\260\320\277\320\270\321\201\321\214", nullptr));
         listWidget_2->setSortingEnabled(__sortingEnabled);
 
+        pushButton->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \320\267\320\260\320\277\320\270\321\201\321\214 \320\276 \321\202\321\200\320\265\320\275\320\270\321\200\320\276\320\262\320\272\320\265", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("MainWindow", "\320\236\321\202\320\272\321\200\321\213\321\202\321\214 \320\276\320\272\320\275\320\276", nullptr));
     } // retranslateUi
 
 };

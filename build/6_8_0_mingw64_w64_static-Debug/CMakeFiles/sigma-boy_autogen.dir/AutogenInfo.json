@@ -347,6 +347,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/qt-project/sigma-boy/add_workout.h",
+			"MU",
+			"EWIEGA46WW/moc_add_workout.cpp",
+			null
+		],
+		[
 			"D:/qt-project/sigma-boy/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -427,6 +433,7 @@
 	"SETTINGS_FILE" : "D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/sigma-boy_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "D:/qt-project/sigma-boy/add_workout.cpp", "MU", null ],
 		[ "D:/qt-project/sigma-boy/main.cpp", "MU", null ],
 		[ "D:/qt-project/sigma-boy/mainwindow.cpp", "MU", null ]
 	],

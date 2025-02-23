@@ -1,29 +1,30 @@
-#include "mainwindow.h"
-#include "./ui_mainwindow.h"
+#include "add_workout.h"
+#include "ui_add_workout.h"
 #include <QSqlQuery> // Для QSqlQuery
 #include <QSqlError> // Для QSqlError
-#include "add_workout.h" //инклуд окна
+#include <QMessageBox> // Добавьте этот заголовочный файл
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+
+
+add_workout::add_workout(QWidget *parent)
+    : QDialog(parent)
+    , ui(new Ui::add_workout)
 {
     ui->setupUi(this);
 }
 
-MainWindow::~MainWindow()
+add_workout::~add_workout()
 {
     delete ui;
 }
 
-/*
 // Создание записи о тренировке
 bool addTrainingRecord(const QString& date, const QString& description, const QString& exercises){
     QSqlQuery query;
 
     // Подготовка SQL-запроса для вставки данных
-    query.prepare("INSERT INTO trainings (date, training_type, exercise, sets, reps, rest_time) "
-                  "VALUES (:date, :training_type, :exercise, :sets, :reps, :rest_time)");
+    query.prepare("INSERT INTO trainings (date, description, exercises) "
+                  "VALUES (:date, :description, :exercises)");
 
     // Привязка значений к параметрам
     query.bindValue(":date", date);
@@ -36,24 +37,14 @@ bool addTrainingRecord(const QString& date, const QString& description, const QS
         return false;
     }
     return true;
-
-
-    // Выполнение запроса
-    if (!query.exec()) {
-        qCritical() << "Ошибка при добавлении записи в базу данных:" << query.lastError().text();
-        return false;
-    }
-
-    qDebug() << "Запись успешно добавлена.";
-    return true;
 }
-/*
-void MainWindow::on_pushButton_clicked() // Обработчик события + (создание записи о тренировке)
+
+void add_workout::on_pushButton_clicked() // Обработчик события + (создание записи о тренировке)
 {
     // Получаем данные из текстовых полей
-    QString date = ui->lineEditDate->text();
-    QString description = ui->lineEditDescription->text();
-    QString exercises = ui->lineEditExercises->text();
+    QString date = ui->dateEdit->text();
+    QString description = ui->lineEdit_Description->text();
+    QString exercises = ui->comboBox_Exercises->currentText();
 
     // Вызываем функцию для добавления записи в базу данных
     bool success = addTrainingRecord(date, description, exercises);
@@ -65,14 +56,3 @@ void MainWindow::on_pushButton_clicked() // Обработчик события 
         QMessageBox::warning(this, "Ошибка", "Не удалось добавить запись в базу данных.");
     }
 }
-*/
-
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    add_workout window;
-    window.setModal(true);
-    window.exec();
-
-}
-
