@@ -353,9 +353,33 @@
 			null
 		],
 		[
+			"D:/qt-project/sigma-boy/carddelegate.h",
+			"MU",
+			"EWIEGA46WW/moc_carddelegate.cpp",
+			null
+		],
+		[
+			"D:/qt-project/sigma-boy/cardwidget.h",
+			"MU",
+			"EWIEGA46WW/moc_cardwidget.cpp",
+			null
+		],
+		[
+			"D:/qt-project/sigma-boy/insert_complex.h",
+			"MU",
+			"EWIEGA46WW/moc_insert_complex.cpp",
+			null
+		],
+		[
 			"D:/qt-project/sigma-boy/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"D:/qt-project/sigma-boy/models.h",
+			"MU",
+			"EWIEGA46WW/moc_models.cpp",
 			null
 		]
 	],
@@ -434,8 +458,12 @@
 	"SOURCES" : 
 	[
 		[ "D:/qt-project/sigma-boy/add_workout.cpp", "MU", null ],
+		[ "D:/qt-project/sigma-boy/carddelegate.cpp", "MU", null ],
+		[ "D:/qt-project/sigma-boy/cardwidget.cpp", "MU", null ],
+		[ "D:/qt-project/sigma-boy/insert_complex.cpp", "MU", null ],
 		[ "D:/qt-project/sigma-boy/main.cpp", "MU", null ],
-		[ "D:/qt-project/sigma-boy/mainwindow.cpp", "MU", null ]
+		[ "D:/qt-project/sigma-boy/mainwindow.cpp", "MU", null ],
+		[ "D:/qt-project/sigma-boy/models.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

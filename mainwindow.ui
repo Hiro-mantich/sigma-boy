@@ -58,8 +58,8 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>160</x>
-       <y>450</y>
+       <x>80</x>
+       <y>500</y>
        <width>201</width>
        <height>61</height>
       </rect>
@@ -87,69 +87,42 @@
     <property name="frameShadow">
      <enum>QFrame::Shadow::Raised</enum>
     </property>
-    <widget class="QListWidget" name="listWidget_2">
+    <widget class="QPushButton" name="pushButton_addnote">
      <property name="geometry">
       <rect>
-       <x>40</x>
-       <y>30</y>
-       <width>481</width>
-       <height>331</height>
+       <x>470</x>
+       <y>370</y>
+       <width>51</width>
+       <height>51</height>
       </rect>
      </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="gridSize">
-      <size>
-       <width>0</width>
-       <height>40</height>
-      </size>
-     </property>
-     <property name="viewMode">
-      <enum>QListView::ViewMode::ListMode</enum>
-     </property>
-     <item>
-      <property name="text">
-       <string>1 запись</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>2 запись</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>3 запись</string>
-      </property>
-     </item>
-    </widget>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>380</x>
-       <y>300</y>
-       <width>131</width>
-       <height>111</height>
-      </rect>
+     <property name="font">
+      <font>
+       <pointsize>20</pointsize>
+       <italic>false</italic>
+       <fontweight>Black</fontweight>
+      </font>
      </property>
      <property name="text">
-      <string>Добавить запись о тренировке</string>
+      <string>+</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QListView" name="listView_note">
      <property name="geometry">
       <rect>
-       <x>150</x>
-       <y>150</y>
-       <width>231</width>
-       <height>41</height>
+       <x>15</x>
+       <y>15</y>
+       <width>520</width>
+       <height>420</height>
       </rect>
      </property>
-     <property name="text">
-      <string>Открыть окно</string>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(170, 255, 127);
+background-color: rgb(0, 170, 127);</string>
      </property>
     </widget>
+    <zorder>listView_note</zorder>
+    <zorder>pushButton_addnote</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

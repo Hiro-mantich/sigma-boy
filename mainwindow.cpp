@@ -3,12 +3,44 @@
 #include <QSqlQuery> // Для QSqlQuery
 #include <QSqlError> // Для QSqlError
 #include "add_workout.h" //инклуд окна
+#include "models.h"
+#include <QStandardItemModel>
+#include "carddelegate.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , model(new models(this))  // Создаем модель
 {
     ui->setupUi(this);
+
+
+    // Создаем модель
+    QStandardItemModel *model = new QStandardItemModel(this);
+
+    // Добавляем данные в модель
+    QStandardItem *item1 = new QStandardItem("Заголовок 1");
+    item1->setData("Описание 1", Qt::UserRole + 1);  // Дополнительные данные
+    model->appendRow(item1);
+
+    QStandardItem *item2 = new QStandardItem("Заголовок 2");
+    item2->setData("Описание 2", Qt::UserRole + 1);
+    model->appendRow(item2);
+
+    QStandardItem *item3 = new QStandardItem("Заголовок 3");
+    item3->setData("Описание 3", Qt::UserRole + 1);
+    model->appendRow(item3);
+
+    QStandardItem *item4 = new QStandardItem("Заголовок 4");
+    item4->setData("Описание 4", Qt::UserRole + 1);
+    model->appendRow(item4);
+
+    // Устанавливаем модель и делегат в QListView
+    ui->listView_note->setModel(model);
+    ui->listView_note->setItemDelegate(new CardDelegate(this));
+
+    ui->listView_note->setSpacing(10);  // Устанавливаем отступ в 10 пикселей
+
 }
 
 MainWindow::~MainWindow()
@@ -16,63 +48,13 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-/*
-// Создание записи о тренировке
-bool addTrainingRecord(const QString& date, const QString& description, const QString& exercises){
-    QSqlQuery query;
-
-    // Подготовка SQL-запроса для вставки данных
-    query.prepare("INSERT INTO trainings (date, training_type, exercise, sets, reps, rest_time) "
-                  "VALUES (:date, :training_type, :exercise, :sets, :reps, :rest_time)");
-
-    // Привязка значений к параметрам
-    query.bindValue(":date", date);
-    query.bindValue(":description", description);
-    query.bindValue(":exercises", exercises);
-
-    // Выполнение запроса
-    if(!query.exec()){
-        qDebug() << "Ошибка при добавлении записи: " << query.lastError();
-        return false;
-    }
-    return true;
-
-
-    // Выполнение запроса
-    if (!query.exec()) {
-        qCritical() << "Ошибка при добавлении записи в базу данных:" << query.lastError().text();
-        return false;
-    }
-
-    qDebug() << "Запись успешно добавлена.";
-    return true;
-}
-/*
-void MainWindow::on_pushButton_clicked() // Обработчик события + (создание записи о тренировке)
-{
-    // Получаем данные из текстовых полей
-    QString date = ui->lineEditDate->text();
-    QString description = ui->lineEditDescription->text();
-    QString exercises = ui->lineEditExercises->text();
-
-    // Вызываем функцию для добавления записи в базу данных
-    bool success = addTrainingRecord(date, description, exercises);
-
-    // Отображаем сообщение об успехе или ошибке
-    if (success) {
-        QMessageBox::information(this, "Успех", "Запись о тренировке добавлена!");
-    } else {
-        QMessageBox::warning(this, "Ошибка", "Не удалось добавить запись в базу данных.");
-    }
-}
-*/
-
-
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_pushButton_addnote_clicked()
 {
     add_workout window;
     window.setModal(true);
     window.exec();
 
+    // Пример добавления новой строки после закрытия окна
+    model->addItem("Новая строка");
 }
 

@@ -45,6 +45,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         add_workout.h add_workout.cpp add_workout.ui
+        insert_complex.h insert_complex.cpp insert_complex.ui
+        models.h models.cpp
+        cardwidget.h cardwidget.cpp
+        carddelegate.h carddelegate.cpp
     )
 else()
     add_executable(sigma-boy ${PROJECT_SOURCES})

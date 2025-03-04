@@ -81,6 +81,38 @@ build CMakeFiles/sigma-boy.dir/add_workout.cpp.obj: CXX_COMPILER__sigma-boy_unsc
   OBJECT_DIR = CMakeFiles\sigma-boy.dir
   OBJECT_FILE_DIR = CMakeFiles\sigma-boy.dir
 
+build CMakeFiles/sigma-boy.dir/insert_complex.cpp.obj: CXX_COMPILER__sigma-boy_unscanned_Debug D$:/qt-project/sigma-boy/insert_complex.cpp || cmake_object_order_depends_target_sigma-boy
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64
+  DEP_FILE = CMakeFiles\sigma-boy.dir\insert_complex.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/include -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtCore -isystem D:/SOFT/MSYS2/mingw64/include/qt6 -isystem D:/SOFT/MSYS2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtGui -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtSql
+  OBJECT_DIR = CMakeFiles\sigma-boy.dir
+  OBJECT_FILE_DIR = CMakeFiles\sigma-boy.dir
+
+build CMakeFiles/sigma-boy.dir/models.cpp.obj: CXX_COMPILER__sigma-boy_unscanned_Debug D$:/qt-project/sigma-boy/models.cpp || cmake_object_order_depends_target_sigma-boy
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64
+  DEP_FILE = CMakeFiles\sigma-boy.dir\models.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/include -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtCore -isystem D:/SOFT/MSYS2/mingw64/include/qt6 -isystem D:/SOFT/MSYS2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtGui -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtSql
+  OBJECT_DIR = CMakeFiles\sigma-boy.dir
+  OBJECT_FILE_DIR = CMakeFiles\sigma-boy.dir
+
+build CMakeFiles/sigma-boy.dir/cardwidget.cpp.obj: CXX_COMPILER__sigma-boy_unscanned_Debug D$:/qt-project/sigma-boy/cardwidget.cpp || cmake_object_order_depends_target_sigma-boy
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64
+  DEP_FILE = CMakeFiles\sigma-boy.dir\cardwidget.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/include -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtCore -isystem D:/SOFT/MSYS2/mingw64/include/qt6 -isystem D:/SOFT/MSYS2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtGui -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtSql
+  OBJECT_DIR = CMakeFiles\sigma-boy.dir
+  OBJECT_FILE_DIR = CMakeFiles\sigma-boy.dir
+
+build CMakeFiles/sigma-boy.dir/carddelegate.cpp.obj: CXX_COMPILER__sigma-boy_unscanned_Debug D$:/qt-project/sigma-boy/carddelegate.cpp || cmake_object_order_depends_target_sigma-boy
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_SQL_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64
+  DEP_FILE = CMakeFiles\sigma-boy.dir\carddelegate.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/include -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtCore -isystem D:/SOFT/MSYS2/mingw64/include/qt6 -isystem D:/SOFT/MSYS2/mingw64/share/qt6/mkspecs/win32-g++ -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtGui -isystem D:/SOFT/MSYS2/mingw64/include/qt6/QtSql
+  OBJECT_DIR = CMakeFiles\sigma-boy.dir
+  OBJECT_FILE_DIR = CMakeFiles\sigma-boy.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target sigma-boy
@@ -89,7 +121,7 @@ build CMakeFiles/sigma-boy.dir/add_workout.cpp.obj: CXX_COMPILER__sigma-boy_unsc
 #############################################
 # Link the executable sigma-boy.exe
 
-build sigma-boy.exe: CXX_EXECUTABLE_LINKER__sigma-boy_Debug CMakeFiles/sigma-boy.dir/sigma-boy_autogen/mocs_compilation.cpp.obj CMakeFiles/sigma-boy.dir/main.cpp.obj CMakeFiles/sigma-boy.dir/mainwindow.cpp.obj CMakeFiles/sigma-boy.dir/add_workout.cpp.obj | D$:/SOFT/MSYS2/mingw64/lib/libQt6Widgets.dll.a D$:/SOFT/MSYS2/mingw64/lib/libQt6Sql.dll.a D$:/SOFT/MSYS2/mingw64/lib/libsqlite3.dll.a D$:/SOFT/MSYS2/mingw64/lib/libQt6Gui.dll.a D$:/SOFT/MSYS2/mingw64/lib/libQt6Core.dll.a || sigma-boy_autogen sigma-boy_autogen_timestamp_deps
+build sigma-boy.exe: CXX_EXECUTABLE_LINKER__sigma-boy_Debug CMakeFiles/sigma-boy.dir/sigma-boy_autogen/mocs_compilation.cpp.obj CMakeFiles/sigma-boy.dir/main.cpp.obj CMakeFiles/sigma-boy.dir/mainwindow.cpp.obj CMakeFiles/sigma-boy.dir/add_workout.cpp.obj CMakeFiles/sigma-boy.dir/insert_complex.cpp.obj CMakeFiles/sigma-boy.dir/models.cpp.obj CMakeFiles/sigma-boy.dir/cardwidget.cpp.obj CMakeFiles/sigma-boy.dir/carddelegate.cpp.obj | D$:/SOFT/MSYS2/mingw64/lib/libQt6Widgets.dll.a D$:/SOFT/MSYS2/mingw64/lib/libQt6Sql.dll.a D$:/SOFT/MSYS2/mingw64/lib/libsqlite3.dll.a D$:/SOFT/MSYS2/mingw64/lib/libQt6Gui.dll.a D$:/SOFT/MSYS2/mingw64/lib/libQt6Core.dll.a || sigma-boy_autogen sigma-boy_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_LIBRARIES = D:/SOFT/MSYS2/mingw64/lib/libQt6Widgets.dll.a  D:/SOFT/MSYS2/mingw64/lib/libQt6Sql.dll.a  D:/SOFT/MSYS2/mingw64/lib/libsqlite3.dll.a  D:/SOFT/MSYS2/mingw64/lib/libQt6Gui.dll.a  -ld3d11  -ldxgi  -ldxguid  -ld3d12  D:/SOFT/MSYS2/mingw64/lib/libQt6Core.dll.a  -lmpr  -luserenv  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\sigma-boy.dir
@@ -174,7 +206,7 @@ build sigma-boy_autogen_timestamp_deps: phony
 #############################################
 # Utility command for sigma-boy_autogen
 
-build sigma-boy_autogen: phony CMakeFiles/sigma-boy_autogen sigma-boy_autogen/include/ui_mainwindow.h sigma-boy_autogen/include/ui_add_workout.h sigma-boy_autogen/timestamp sigma-boy_autogen/mocs_compilation.cpp sigma-boy_autogen_timestamp_deps
+build sigma-boy_autogen: phony CMakeFiles/sigma-boy_autogen sigma-boy_autogen/include/ui_mainwindow.h sigma-boy_autogen/include/ui_add_workout.h sigma-boy_autogen/include/ui_insert_complex.h sigma-boy_autogen/timestamp sigma-boy_autogen/mocs_compilation.cpp sigma-boy_autogen_timestamp_deps
 
 
 #############################################
@@ -191,7 +223,7 @@ build sigma-boy_autogen/timestamp sigma-boy_autogen/mocs_compilation.cpp | ${cma
 #############################################
 # Phony custom command for CMakeFiles\sigma-boy_autogen
 
-build CMakeFiles/sigma-boy_autogen sigma-boy_autogen/include/ui_mainwindow.h sigma-boy_autogen/include/ui_add_workout.h | ${cmake_ninja_workdir}CMakeFiles/sigma-boy_autogen ${cmake_ninja_workdir}sigma-boy_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}sigma-boy_autogen/include/ui_add_workout.h: phony sigma-boy_autogen/timestamp || sigma-boy_autogen_timestamp_deps
+build CMakeFiles/sigma-boy_autogen sigma-boy_autogen/include/ui_mainwindow.h sigma-boy_autogen/include/ui_add_workout.h sigma-boy_autogen/include/ui_insert_complex.h | ${cmake_ninja_workdir}CMakeFiles/sigma-boy_autogen ${cmake_ninja_workdir}sigma-boy_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}sigma-boy_autogen/include/ui_add_workout.h ${cmake_ninja_workdir}sigma-boy_autogen/include/ui_insert_complex.h: phony sigma-boy_autogen/timestamp || sigma-boy_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

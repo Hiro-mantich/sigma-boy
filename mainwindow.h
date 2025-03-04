@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "models.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,9 +20,10 @@ public:
 
 private slots:
 
-    void on_pushButton_2_clicked();
+    void on_pushButton_addnote_clicked();
 
 private:
     Ui::MainWindow *ui;
+    models *model;
 };
 #endif // MAINWINDOW_H

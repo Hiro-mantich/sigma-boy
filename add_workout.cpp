@@ -2,8 +2,8 @@
 #include "ui_add_workout.h"
 #include <QSqlQuery> // Для QSqlQuery
 #include <QSqlError> // Для QSqlError
-#include <QMessageBox> // Добавьте этот заголовочный файл
-
+#include <QMessageBox>
+#include "insert_complex.h"
 
 
 add_workout::add_workout(QWidget *parent)
@@ -31,6 +31,10 @@ bool addTrainingRecord(const QString& date, const QString& description, const QS
     query.bindValue(":description", description);
     query.bindValue(":exercises", exercises);
 
+
+
+
+
     // Выполнение запроса
     if(!query.exec()){
         qDebug() << "Ошибка при добавлении записи: " << query.lastError();
@@ -44,7 +48,7 @@ void add_workout::on_pushButton_clicked() // Обработчик события
     // Получаем данные из текстовых полей
     QString date = ui->dateEdit->text();
     QString description = ui->lineEdit_Description->text();
-    QString exercises = ui->comboBox_Exercises->currentText();
+    QString exercises = ui->lineEdit_2->text();
 
     // Вызываем функцию для добавления записи в базу данных
     bool success = addTrainingRecord(date, description, exercises);
@@ -56,3 +60,12 @@ void add_workout::on_pushButton_clicked() // Обработчик события
         QMessageBox::warning(this, "Ошибка", "Не удалось добавить запись в базу данных.");
     }
 }
+
+void add_workout::on_pushButton_2_clicked()
+{
+    insert_complex window;
+    window.setModal(true);
+    window.exec();
+
+}
+

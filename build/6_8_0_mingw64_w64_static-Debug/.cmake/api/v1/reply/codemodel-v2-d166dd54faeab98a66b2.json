@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-96b8b36e1e078cc696c7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "sigma-boy",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "sigma-boy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sigma-boy-Debug-bba8b3bd09d199422444.json",
+					"name" : "sigma-boy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sigma-boy_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sigma-boy_autogen-Debug-bf4fb5e7720c7b1c4b2d.json",
+					"name" : "sigma-boy_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sigma-boy_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sigma-boy_autogen_timestamp_deps-Debug-700248bcfb4fb9c65bfb.json",
+					"name" : "sigma-boy_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug",
+		"source" : "D:/qt-project/sigma-boy"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

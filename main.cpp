@@ -26,20 +26,40 @@ int main(int argc, char *argv[])
 
     // Создание таблицы
     QSqlQuery query;
-    QString createTableQuery = R"(
-        CREATE TABLE IF NOT EXISTS trainings (
-            date TEXT,
-            description TEXT,
-            exercises TEXT
-        )
+    // Создание таблицы trainings
+    QString createTrainingsTableQuery = R"(
+    CREATE TABLE IF NOT EXISTS trainings (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        date TEXT,
+        description TEXT,
+        exercises TEXT
+    )
     )";
 
-    if (!query.exec(createTableQuery)) {
-        qCritical() << "Ошибка при создании таблицы:" << query.lastError().text();
+    if (!query.exec(createTrainingsTableQuery)) {
+        qCritical() << "Ошибка при создании таблицы trainings:" << query.lastError().text();
         return -1;
     }
 
-    qDebug() << "База данных и таблица успешно созданы.";
+    // Создание таблицы exercise
+    QString createExerciseTableQuery = R"(
+    CREATE TABLE IF NOT EXISTS exercise (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        title TEXT,
+        group_muscle TEXT,
+        numb_try INTEGER,
+        numb_repit INTEGER,
+        training_id INTEGER,  -- Поле для связи с таблицей trainings
+        FOREIGN KEY (training_id) REFERENCES trainings(id) ON DELETE CASCADE
+    )
+    )";
+
+    if (!query.exec(createExerciseTableQuery)) {
+        qCritical() << "Ошибка при создании таблицы exercise:" << query.lastError().text();
+        return -1;
+    }
+
+    qDebug() << "База данных и таблицы успешно созданы.";
 
     return a.exec();
 }

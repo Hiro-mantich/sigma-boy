@@ -187,11 +187,14 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/pthread_signal.h \
 	D:/SOFT/MSYS2/mingw64/include/pthread_time.h \
 	D:/SOFT/MSYS2/mingw64/include/pthread_unistd.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/QAbstractListModel \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/QStringList \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20functional.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20iterator.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20memory.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20type_traits.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q23utility.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qabstractitemmodel.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qalgorithms.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qanystringview.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qarraydata.h \
@@ -232,12 +235,14 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qglobalstatic.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qhash.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qhashfunctions.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qiodevice.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qiodevicebase.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qiterable.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qiterator.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qlatin1stringview.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qline.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qlist.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qlocale.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qlogging.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qmalloc.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qmap.h \
@@ -258,6 +263,7 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qprocessordetection.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qrect.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qrefcount.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qregularexpression.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qscopedpointer.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qscopeguard.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qset.h \
@@ -301,6 +307,7 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qtversionchecks.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qtypeinfo.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qtypes.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qurl.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qutf8stringview.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qvariant.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qvarlengtharray.h \
@@ -320,23 +327,45 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qkeysequence.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qpaintdevice.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qpalette.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qpicture.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qpixelformat.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qpixmap.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qpolygon.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qregion.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qrgb.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qrgba64.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtextdocument.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtgui-config.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtguiexports.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtguiglobal.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtransform.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qvalidator.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qwindowdefs.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qwindowdefs_win.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QDialog \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QLabel \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QMainWindow \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QStyledItemDelegate \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QVBoxLayout \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QWidget \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qabstractitemdelegate.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qabstractslider.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qabstractspinbox.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qboxlayout.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qdialog.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qframe.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qgridlayout.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qlabel.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qlayout.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qlayoutitem.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qmainwindow.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qrubberband.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qsizepolicy.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qslider.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qstyle.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qstyleditemdelegate.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qstyleoption.h \
+	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtabbar.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtabwidget.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtwidgets-config.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtwidgetsexports.h \
@@ -605,9 +634,18 @@ sigma-boy_autogen/timestamp: \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/3.31.4/CMakeRCCompiler.cmake \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/3.31.4/CMakeSystem.cmake \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/moc_predefs.h \
+	D:/qt-project/sigma-boy/carddelegate.cpp \
+	D:/qt-project/sigma-boy/carddelegate.h \
+	D:/qt-project/sigma-boy/cardwidget.cpp \
+	D:/qt-project/sigma-boy/cardwidget.h \
+	D:/qt-project/sigma-boy/insert_complex.cpp \
+	D:/qt-project/sigma-boy/insert_complex.h \
 	D:/qt-project/sigma-boy/main.cpp \
 	D:/qt-project/sigma-boy/mainwindow.cpp \
 	D:/qt-project/sigma-boy/mainwindow.h \
+	D:/qt-project/sigma-boy/models.cpp \
+	D:/qt-project/sigma-boy/models.h \
 	D:/qt-project/sigma-boy/add_workout.ui \
+	D:/qt-project/sigma-boy/insert_complex.ui \
 	D:/qt-project/sigma-boy/mainwindow.ui \
 	D:/SOFT/MSYS2/mingw64/bin/cmake.exe
