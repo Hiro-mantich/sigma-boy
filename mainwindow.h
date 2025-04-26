@@ -34,5 +34,6 @@ private:
     void addTestCard();
 
 public:   void loadTrainingsFromDB();
+    void updateCalendarTraining();
 };
 #endif // MAINWINDOW_H

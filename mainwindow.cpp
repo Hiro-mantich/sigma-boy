@@ -1,4 +1,3 @@
-
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "carddelegate.h"
@@ -8,6 +7,8 @@
 #include <QStandardItemModel>
 #include <QMessageBox>  // Для отображения описания
 #include "cardwidget.h"  // Добавьте эту строку
+#include <QTextCharFormat>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,6 +30,9 @@ MainWindow::MainWindow(QWidget *parent)
     // Загружаем данные из базы данных
     loadTrainingsFromDB();
 
+
+    updateCalendarTraining();
+
 /*
     // Настройки для listView_note
     ui->listView_note->setSpacing(10);
@@ -45,6 +49,40 @@ MainWindow::MainWindow(QWidget *parent)
     ui->listWidget_notes->setResizeMode(QListView::Adjust);
     ui->listWidget_notes->setSelectionMode(QAbstractItemView::NoSelection);
     ui->listWidget_notes->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
+
+
+    /*
+    QCalendarWidget *calendar = ui->calendarWidget;
+    QSqlQuery query("SELECT date, description FROM trainings");
+    while (query.next()) {
+        QString rawDate = query.value("date").toString();
+        QString description = query.value("description").toString().toLower().trimmed();
+        QDate date = QDate::fromString(rawDate, "dd.MM.yyyy"); // Или укажи свой формат!
+
+        qDebug() << "Сырые данные:" << rawDate << "| Полученная дата:" << date << "| Описание:" << description;
+
+        if (!date.isValid())
+            continue;
+
+
+        QColor color; // какой цвет подсветки?
+        if (description == "спина")
+            color = Qt::green;
+        else if (description == "грудь"){
+            color = Qt::blue;
+            printf("Good");
+
+        }
+        else
+            printf("Not good");
+        // Настраиваем формат для даты
+        QTextCharFormat format;
+        format.setBackground(color);
+
+        // Применяем к календарю для этой даты
+        calendar->setDateTextFormat(date, format);
+    }
+*/
 }
 
 MainWindow::~MainWindow()
@@ -71,6 +109,30 @@ void MainWindow::addTestCard() {
     ui->listView_note->setModel(model);
 
     qDebug() << "Тестовая карточка добавлена!";
+}
+
+void MainWindow::updateCalendarTraining(){ // Функция по окрашиванию дней в календаре в зависимости от типа тренировки
+    ui->calendarWidget->setDateTextFormat(QDate(), QTextCharFormat()); // Cнимаем все подсветки: необязательно, но иногда нужно
+    QSqlQuery query("SELECT date, description FROM trainings");
+    while (query.next()) {
+        QString rawDate = query.value("date").toString();
+        QDate date = QDate::fromString(rawDate, "dd.MM.yyyy");
+        if (!date.isValid()) continue;
+        QString desc = query.value("description").toString().toLower().trimmed();
+
+        QColor color;
+        if (desc == "спина")
+            color = Qt::green;
+        else if (desc == "грудь")
+            color = Qt::blue;
+        else if (desc == "ноги")
+            color = Qt::yellow;
+        else
+            continue;
+        QTextCharFormat fmt;
+        fmt.setBackground(color);
+        ui->calendarWidget->setDateTextFormat(date, fmt);
+    }
 }
 
 void MainWindow::loadTrainingsFromDB() {
@@ -111,6 +173,7 @@ void MainWindow::on_pushButton_addnote_clicked()
     window.exec();
 
     loadTrainingsFromDB();  // Перезагрузить данные после добавления новой записи
+    updateCalendarTraining();
 }
 
 

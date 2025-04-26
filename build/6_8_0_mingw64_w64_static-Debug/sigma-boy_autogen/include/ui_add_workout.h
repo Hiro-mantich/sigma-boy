@@ -33,11 +33,11 @@ public:
     QPushButton *pushButton_2;
     QLineEdit *lineEdit_2;
     QListView *listView_exercises;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_3;
     QLineEdit *lineEdit_Description;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_2;
     QDateEdit *dateEdit;
@@ -67,7 +67,7 @@ public:
         label->setAlignment(Qt::AlignmentFlag::AlignCenter);
         lineEdit = new QLineEdit(frame);
         lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(60, 190, 201, 26));
+        lineEdit->setGeometry(QRect(40, 190, 231, 31));
         QFont font1;
         font1.setPointSize(12);
         lineEdit->setFont(font1);
@@ -85,45 +85,46 @@ public:
         pushButton_2->setIconSize(QSize(20, 20));
         lineEdit_2 = new QLineEdit(frame);
         lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setGeometry(QRect(300, 190, 113, 26));
+        lineEdit_2->setGeometry(QRect(290, 190, 121, 31));
         listView_exercises = new QListView(frame);
         listView_exercises->setObjectName("listView_exercises");
         listView_exercises->setGeometry(QRect(60, 240, 371, 191));
-        widget = new QWidget(frame);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(40, 140, 266, 35));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(frame);
+        layoutWidget->setObjectName("layoutWidget");
+        layoutWidget->setGeometry(QRect(40, 140, 266, 35));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName("label_3");
         label_3->setFont(font1);
 
         horizontalLayout->addWidget(label_3);
 
-        lineEdit_Description = new QLineEdit(widget);
+        lineEdit_Description = new QLineEdit(layoutWidget);
         lineEdit_Description->setObjectName("lineEdit_Description");
         lineEdit_Description->setFont(font1);
         lineEdit_Description->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
 
         horizontalLayout->addWidget(lineEdit_Description);
 
-        widget1 = new QWidget(frame);
-        widget1->setObjectName("widget1");
-        widget1->setGeometry(QRect(40, 90, 176, 31));
-        horizontalLayout_2 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(frame);
+        layoutWidget1->setObjectName("layoutWidget1");
+        layoutWidget1->setGeometry(QRect(40, 90, 176, 31));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_2->setObjectName("horizontalLayout_2");
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_2 = new QLabel(widget1);
+        label_2 = new QLabel(layoutWidget1);
         label_2->setObjectName("label_2");
         label_2->setFont(font1);
 
         horizontalLayout_2->addWidget(label_2);
 
-        dateEdit = new QDateEdit(widget1);
+        dateEdit = new QDateEdit(layoutWidget1);
         dateEdit->setObjectName("dateEdit");
         dateEdit->setFont(font1);
         dateEdit->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);"));
+        dateEdit->setDateTime(QDateTime(QDate(2025, 4, 1), QTime(0, 0, 0)));
 
         horizontalLayout_2->addWidget(dateEdit);
 
@@ -137,11 +138,11 @@ public:
     {
         add_workout->setWindowTitle(QCoreApplication::translate("add_workout", "Dialog", nullptr));
         label->setText(QCoreApplication::translate("add_workout", "\320\241\320\276\320\267\320\264\320\260\320\275\320\270\320\265 \320\267\320\260\320\277\320\270\321\201\320\270 \320\276 \320\275\320\276\320\262\320\276\320\271 \321\202\321\200\320\265\320\275\320\270\321\200\320\276\320\262\320\272\320\265", nullptr));
-        lineEdit->setText(QCoreApplication::translate("add_workout", "\320\235\320\260\320\261\320\276\321\200 \321\203\320\277\321\200\320\260\320\266\320\275\320\265\320\275\320\270\320\271", nullptr));
+        lineEdit->setText(QCoreApplication::translate("add_workout", "\320\236\321\201\320\275\320\276\320\262\320\275\320\260\321\217 \320\263\321\200\321\203\320\277\320\277\320\260 \320\274\321\213\321\210\321\206", nullptr));
         pushButton->setText(QCoreApplication::translate("add_workout", "\320\224\320\276\320\261\320\260\320\262\320\270\321\202\321\214 \321\202\321\200\320\265\320\275\320\270\321\200\320\276\320\262\320\272\321\203", nullptr));
         pushButton_2->setText(QCoreApplication::translate("add_workout", "+", nullptr));
         lineEdit_2->setText(QString());
-        label_3->setText(QCoreApplication::translate("add_workout", "\320\227\320\260\320\274\320\265\321\202\320\272\320\260", nullptr));
+        label_3->setText(QCoreApplication::translate("add_workout", "\320\227\320\260\320\263\320\276\320\273\320\276\320\262\320\276\320\272", nullptr));
         label_2->setText(QCoreApplication::translate("add_workout", "\320\224\320\260\321\202\320\260", nullptr));
     } // retranslateUi
 

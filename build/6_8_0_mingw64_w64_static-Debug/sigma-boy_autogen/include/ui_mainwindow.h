@@ -30,7 +30,7 @@ public:
     QWidget *centralwidget;
     QFrame *frameCalendat;
     QLabel *label_3;
-    QCalendarWidget *calendarWidget_2;
+    QCalendarWidget *calendarWidget;
     QLabel *label_4;
     QFrame *frame_bot;
     QPushButton *pushButton_addnote;
@@ -55,9 +55,9 @@ public:
         label_3 = new QLabel(frameCalendat);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(140, 120, 241, 191));
-        calendarWidget_2 = new QCalendarWidget(frameCalendat);
-        calendarWidget_2->setObjectName("calendarWidget_2");
-        calendarWidget_2->setGeometry(QRect(0, 0, 550, 550));
+        calendarWidget = new QCalendarWidget(frameCalendat);
+        calendarWidget->setObjectName("calendarWidget");
+        calendarWidget->setGeometry(QRect(0, 0, 550, 550));
         label_4 = new QLabel(frameCalendat);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(80, 500, 201, 61));

@@ -66,10 +66,10 @@ background-color: rgb(169, 169, 169);</string>
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>60</x>
+      <x>40</x>
       <y>190</y>
-      <width>201</width>
-      <height>26</height>
+      <width>231</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -81,7 +81,7 @@ background-color: rgb(169, 169, 169);</string>
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Набор упражнений</string>
+     <string>Основная группа мышц</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton">
@@ -125,10 +125,10 @@ background-color: rgb(169, 169, 169);</string>
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>290</x>
       <y>190</y>
-      <width>113</width>
-      <height>26</height>
+      <width>121</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -145,7 +145,7 @@ background-color: rgb(169, 169, 169);</string>
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -163,7 +163,7 @@ background-color: rgb(169, 169, 169);</string>
         </font>
        </property>
        <property name="text">
-        <string>Заметка</string>
+        <string>Заголовок</string>
        </property>
       </widget>
      </item>
@@ -181,7 +181,7 @@ background-color: rgb(169, 169, 169);</string>
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>40</x>
@@ -212,6 +212,16 @@ background-color: rgb(169, 169, 169);</string>
        </property>
        <property name="styleSheet">
         <string notr="true">background-color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="dateTime">
+        <datetime>
+         <hour>0</hour>
+         <minute>0</minute>
+         <second>0</second>
+         <year>2025</year>
+         <month>4</month>
+         <day>1</day>
+        </datetime>
        </property>
       </widget>
      </item>

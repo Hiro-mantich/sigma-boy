@@ -45,7 +45,7 @@
       <string>Календарь</string>
      </property>
     </widget>
-    <widget class="QCalendarWidget" name="calendarWidget_2">
+    <widget class="QCalendarWidget" name="calendarWidget">
      <property name="geometry">
       <rect>
        <x>0</x>
