@@ -15,11 +15,18 @@ public:
     explicit insert_complex(QWidget *parent = nullptr);
     ~insert_complex();
 
+signals:  // Секция для сигналов
+    void signalExerciseAdd(const QString& title,
+                       const QString& group_muscle,
+                       int numb_try,
+                       int numb_repit);
+
 private slots:
     void on_pushButton_add_clicked();
 
 private:
     Ui::insert_complex *ui;
+
 };
 
 #endif // INSERT_COMPLEX_H

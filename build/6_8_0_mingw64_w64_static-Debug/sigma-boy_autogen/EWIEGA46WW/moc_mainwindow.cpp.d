@@ -311,6 +311,7 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qversiontagging.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qxptype_traits.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qyieldcpu.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/QStandardItemModel \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qaction.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qbitmap.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qbrush.h \
@@ -330,6 +331,7 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qregion.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qrgb.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qrgba64.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qstandarditemmodel.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtgui-config.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtguiexports.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtguiglobal.h \

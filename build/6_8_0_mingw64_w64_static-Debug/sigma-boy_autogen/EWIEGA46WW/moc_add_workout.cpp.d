@@ -188,11 +188,13 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/pthread_signal.h \
   D:/SOFT/MSYS2/mingw64/include/pthread_time.h \
   D:/SOFT/MSYS2/mingw64/include/pthread_unistd.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/QStringListModel \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20functional.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20iterator.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20memory.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20type_traits.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q23utility.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qabstractitemmodel.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qalgorithms.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qanystringview.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qarraydata.h \
@@ -275,6 +277,7 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qstringconverter_base.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qstringfwd.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qstringlist.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qstringlistmodel.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qstringliteral.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qstringmatcher.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qstringtokenizer.h \
@@ -360,4 +363,5 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/vadefs.h \
   D:/SOFT/MSYS2/mingw64/include/wchar.h \
   D:/SOFT/MSYS2/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/mm_malloc.h \
-  D:/SOFT/MSYS2/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h
+  D:/SOFT/MSYS2/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdbool.h \
+  D:/qt-project/sigma-boy/insert_complex.h

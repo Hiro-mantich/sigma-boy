@@ -8,6 +8,7 @@ insert_complex::insert_complex(QWidget *parent)
     , ui(new Ui::insert_complex)
 {
     ui->setupUi(this);
+
 }
 
 insert_complex::~insert_complex()
@@ -16,7 +17,7 @@ insert_complex::~insert_complex()
 }
 
 // Создание записи о тренировке
-bool addExerciseRecord(const QString& title, const QString& group_muscle, int numb_try, int numb_repit, int training_id){
+bool addExerciseRecord1(const QString& title, const QString& group_muscle, int numb_try, int numb_repit, int training_id){
     QSqlQuery query;
 
     // Подготовка SQL-запроса для вставки данных
@@ -38,28 +39,27 @@ bool addExerciseRecord(const QString& title, const QString& group_muscle, int nu
     return true;
 }
 
-
 void insert_complex::on_pushButton_add_clicked()
 {
     // Получаем данные из текстовых полей
     QString title = ui->lineEdit_title->text();
     QString group_muscle = ui->lineEdit_group_muscle->text();
-    QString numb_try_str = ui->lineEdit_numb_try->text();
-    QString numb_repit_str = ui->lineEdit_numb_repit->text();
+    int numb_try = ui->lineEdit_numb_try->text().toInt();
+    int numb_repit = ui->lineEdit_numb_repit->text().toInt();
 
-    int numb_try = numb_try_str.toInt();  // Преобразование из кустринг в инт
-    int numb_repit = numb_repit_str.toInt();  // Преобразование
-
-    int training_id = 0;
-
-    // Вызываем функцию для добавления записи в базу данных
-    bool success = addExerciseRecord(title, group_muscle, numb_try, numb_repit, training_id);
-
-    // Отображаем сообщение об успехе или ошибке
-    if (success) {
-        QMessageBox::information(this, "Успех", "Запись о тренировке добавлена!");
-    } else {
-        QMessageBox::warning(this, "Ошибка", "Не удалось добавить запись в базу данных.");
+    // Проверка данных
+    if(title.isEmpty() || group_muscle.isEmpty()) {
+        QMessageBox::warning(this, "Ошибка", "Заполните все поля");
+        return;
     }
+
+    // Отправляем данные через сигнал
+    emit signalExerciseAdd(title, group_muscle, numb_try, numb_repit);
+
+    // Закрываем окно
+    accept();
+
+
+    //}
 }
 

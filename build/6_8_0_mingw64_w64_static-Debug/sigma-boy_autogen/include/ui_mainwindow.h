@@ -15,6 +15,7 @@
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -34,6 +35,7 @@ public:
     QFrame *frame_bot;
     QPushButton *pushButton_addnote;
     QListView *listView_note;
+    QListWidget *listWidget_notes;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -78,7 +80,13 @@ public:
         listView_note->setGeometry(QRect(15, 15, 520, 420));
         listView_note->setStyleSheet(QString::fromUtf8("background-color: rgb(170, 255, 127);\n"
 "background-color: rgb(0, 170, 127);"));
+        listWidget_notes = new QListWidget(frame_bot);
+        listWidget_notes->setObjectName("listWidget_notes");
+        listWidget_notes->setGeometry(QRect(15, 15, 520, 420));
+        listWidget_notes->setStyleSheet(QString::fromUtf8("\n"
+"background-color: rgb(170, 255, 197);"));
         listView_note->raise();
+        listWidget_notes->raise();
         pushButton_addnote->raise();
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);

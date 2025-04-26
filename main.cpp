@@ -11,9 +11,8 @@
 
 int main(int argc, char *argv[])
 {
+
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
 
     // Создание базы данных SQLite
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
@@ -23,6 +22,8 @@ int main(int argc, char *argv[])
         qCritical() << "Ошибка при открытии базы данных:" << db.lastError().text();
         return -1;
     }
+    else
+        qDebug() << "Тут все гуд. Есть подключение в main";
 
     // Создание таблицы
     QSqlQuery query;
@@ -61,5 +62,10 @@ int main(int argc, char *argv[])
 
     qDebug() << "База данных и таблицы успешно созданы.";
 
+    MainWindow w;
+    w.show();
+
     return a.exec();
+
+
 }

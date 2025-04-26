@@ -188,11 +188,14 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/pthread_signal.h \
   D:/SOFT/MSYS2/mingw64/include/pthread_time.h \
   D:/SOFT/MSYS2/mingw64/include/pthread_unistd.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/QEasingCurve \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/QPropertyAnimation \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20functional.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20iterator.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20memory.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q20type_traits.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/q23utility.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qabstractanimation.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qalgorithms.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qanystringview.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qarraydata.h \
@@ -221,6 +224,7 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qdarwinhelpers.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qdatastream.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qdebug.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qeasingcurve.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qendian.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qexceptionhandling.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qflags.h \
@@ -258,6 +262,7 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qpair.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qpoint.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qprocessordetection.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qpropertyanimation.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qrect.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qrefcount.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qscopedpointer.h \
@@ -306,6 +311,7 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qurl.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qutf8stringview.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qvariant.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qvariantanimation.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qvarlengtharray.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qversiontagging.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qxptype_traits.h \
@@ -337,15 +343,19 @@ D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/E
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtransform.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qwindowdefs.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qwindowdefs_win.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QHBoxLayout \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QLabel \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QPushButton \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QVBoxLayout \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QWidget \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qabstractbutton.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qboxlayout.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qframe.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qgridlayout.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qlabel.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qlayout.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qlayoutitem.h \
+  D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qpushbutton.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qsizepolicy.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtwidgets-config.h \
   D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtwidgetsexports.h \

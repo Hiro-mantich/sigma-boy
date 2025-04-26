@@ -1,52 +1,108 @@
+
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "carddelegate.h"
+#include "add_workout.h" // Инклюд окна
 #include <QSqlQuery> // Для QSqlQuery
 #include <QSqlError> // Для QSqlError
-#include "add_workout.h" //инклуд окна
-#include "models.h"
 #include <QStandardItemModel>
-#include "carddelegate.h"
+#include <QMessageBox>  // Для отображения описания
+#include "cardwidget.h"  // Добавьте эту строку
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
-    , model(new models(this))  // Создаем модель
 {
     ui->setupUi(this);
 
+    CardWidget *card = new CardWidget("Заголовок", "Описание", this);
 
-    // Создаем модель
-    QStandardItemModel *model = new QStandardItemModel(this);
+    // Создаём item
+    QListWidgetItem *item = new QListWidgetItem(ui->listWidget_notes);
+    item->setSizeHint(card->sizeHint());
 
-    // Добавляем данные в модель
-    QStandardItem *item1 = new QStandardItem("Заголовок 1");
-    item1->setData("Описание 1", Qt::UserRole + 1);  // Дополнительные данные
-    model->appendRow(item1);
+    // Привязываем виджет к item
+    ui->listWidget_notes->addItem(item);
+    ui->listWidget_notes->setItemWidget(item, card);
 
-    QStandardItem *item2 = new QStandardItem("Заголовок 2");
-    item2->setData("Описание 2", Qt::UserRole + 1);
-    model->appendRow(item2);
 
-    QStandardItem *item3 = new QStandardItem("Заголовок 3");
-    item3->setData("Описание 3", Qt::UserRole + 1);
-    model->appendRow(item3);
+    // Загружаем данные из базы данных
+    loadTrainingsFromDB();
 
-    QStandardItem *item4 = new QStandardItem("Заголовок 4");
-    item4->setData("Описание 4", Qt::UserRole + 1);
-    model->appendRow(item4);
+/*
+    // Настройки для listView_note
+    ui->listView_note->setSpacing(10);
+    ui->listView_note->setViewMode(QListView::IconMode);
 
-    // Устанавливаем модель и делегат в QListView
-    ui->listView_note->setModel(model);
+    // Установка делегата для кастомного отображения
     ui->listView_note->setItemDelegate(new CardDelegate(this));
+*/
 
-    ui->listView_note->setSpacing(10);  // Устанавливаем отступ в 10 пикселей
+    // Соединяем сигнал clicked с вашим слотом onCardClicked
+    //connect(ui->listView_note, &QListView::clicked, this, &MainWindow::onCardClicked);
 
+    ui->listWidget_notes->setSpacing(10);
+    ui->listWidget_notes->setResizeMode(QListView::Adjust);
+    ui->listWidget_notes->setSelectionMode(QAbstractItemView::NoSelection);
+    ui->listWidget_notes->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
 }
 
 MainWindow::~MainWindow()
 {
+    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
     delete ui;
+    // model очищается автоматически благодаря своей привязке к родительскому объекту
 }
+
+
+void MainWindow::addTestCard() {
+    // Создаем тестовые данные
+    QString testDate = "01.01.2025";
+    QString testDescription = "Тестовое описание";
+
+    // Создаем элемент модели
+    QStandardItem *item = new QStandardItem(testDate);
+    item->setData(testDescription, Qt::UserRole + 1);
+
+    // Добавляем элемент в модель
+    model->appendRow(item);
+
+    // Связываем модель с видом
+    ui->listView_note->setModel(model);
+
+    qDebug() << "Тестовая карточка добавлена!";
+}
+
+void MainWindow::loadTrainingsFromDB() {
+    QSqlQuery query("SELECT exercises, description FROM trainings");
+
+    if (!query.exec()) {
+        qDebug() << "Ошибка при запросе к базе данных: " << query.lastError();
+        return;
+    }
+
+    ui->listWidget_notes->clear();  // Очищаем список перед добавлением
+
+    while (query.next()) {
+        QString title = query.value("exercises").toString();
+        QString description = query.value("description").toString();
+
+        // Создаём карточку
+        CardWidget *card = new CardWidget(title, description, this);
+
+        QListWidgetItem *item = new QListWidgetItem(ui->listWidget_notes);
+        item->setSizeHint(card->sizeHint());
+
+        ui->listWidget_notes->addItem(item);
+        ui->listWidget_notes->setItemWidget(item, card);
+
+        // Обновляем размер при раскрытии
+        connect(card, &CardWidget::sizeChanged, this, [=]() {
+            item->setSizeHint(card->sizeHint());
+        });
+    }
+}
+
 
 void MainWindow::on_pushButton_addnote_clicked()
 {
@@ -54,7 +110,9 @@ void MainWindow::on_pushButton_addnote_clicked()
     window.setModal(true);
     window.exec();
 
-    // Пример добавления новой строки после закрытия окна
-    model->addItem("Новая строка");
+    loadTrainingsFromDB();  // Перезагрузить данные после добавления новой записи
 }
+
+
+
 
