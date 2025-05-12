@@ -18,6 +18,7 @@ public:
 signals:  // Секция для сигналов
     void signalExerciseAdd(const QString& title,
                        const QString& group_muscle,
+                        int work_weight,
                        int numb_try,
                        int numb_repit);
 

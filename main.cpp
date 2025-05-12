@@ -8,9 +8,9 @@
 #include <QSqlError>
 
 
-
 int main(int argc, char *argv[])
 {
+
 
     QApplication a(argc, argv);
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     QString createTrainingsTableQuery = R"(
     CREATE TABLE IF NOT EXISTS trainings (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
-        date TEXT,
+        date DATE,
         description TEXT,
         exercises TEXT
     )
@@ -48,6 +48,7 @@ int main(int argc, char *argv[])
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         title TEXT,
         group_muscle TEXT,
+        work_weight DOUBLE,
         numb_try INTEGER,
         numb_repit INTEGER,
         training_id INTEGER,  -- Поле для связи с таблицей trainings

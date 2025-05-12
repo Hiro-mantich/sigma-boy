@@ -43,7 +43,9 @@ static constexpr auto qt_meta_stringdata_ZN10CardWidgetE = QtMocHelpers::stringD
     "",
     "description",
     "sizeChanged",
+    "requestListViewUpdate",
     "onCheckButtonClicked",
+    "onDeleteButtonClicked",
     "minimumHeight"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -56,29 +58,33 @@ Q_CONSTINIT static const uint qt_meta_data_ZN10CardWidgetE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   14, // methods
-       1,   37, // properties
+       5,   14, // methods
+       1,   51, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    1,   32,    2, 0x06,    2 /* Public */,
-       4,    0,   35,    2, 0x06,    4 /* Public */,
+       1,    1,   44,    2, 0x06,    2 /* Public */,
+       4,    0,   47,    2, 0x06,    4 /* Public */,
+       5,    0,   48,    2, 0x06,    5 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       5,    0,   36,    2, 0x08,    5 /* Private */,
+       6,    0,   49,    2, 0x08,    6 /* Private */,
+       7,    0,   50,    2, 0x08,    7 /* Private */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::QString,    3,
     QMetaType::Void,
+    QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void,
+    QMetaType::Void,
 
  // properties: name, type, flags, notifyId, revision
-       6, QMetaType::Int, 0x00015103, uint(-1), 0,
+       8, QMetaType::Int, 0x00015103, uint(-1), 0,
 
        0        // eod
 };
@@ -99,7 +105,11 @@ Q_CONSTINIT const QMetaObject CardWidget::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'sizeChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'requestListViewUpdate'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onCheckButtonClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onDeleteButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -112,7 +122,9 @@ void CardWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->descriptionRequested((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->sizeChanged(); break;
-        case 2: _t->onCheckButtonClicked(); break;
+        case 2: _t->requestListViewUpdate(); break;
+        case 3: _t->onCheckButtonClicked(); break;
+        case 4: _t->onDeleteButtonClicked(); break;
         default: ;
         }
     }
@@ -129,6 +141,13 @@ void CardWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
             using _q_method_type = void (CardWidget::*)();
             if (_q_method_type _q_method = &CardWidget::sizeChanged; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 1;
+                return;
+            }
+        }
+        {
+            using _q_method_type = void (CardWidget::*)();
+            if (_q_method_type _q_method = &CardWidget::requestListViewUpdate; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
+                *result = 2;
                 return;
             }
         }
@@ -168,14 +187,14 @@ int CardWidget::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 5;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty
@@ -197,5 +216,11 @@ void CardWidget::descriptionRequested(const QString & _t1)
 void CardWidget::sizeChanged()
 {
     QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+}
+
+// SIGNAL 2
+void CardWidget::requestListViewUpdate()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, nullptr);
 }
 QT_WARNING_POP

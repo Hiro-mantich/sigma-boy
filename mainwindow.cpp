@@ -1,12 +1,15 @@
 #include "mainwindow.h"
+#include "statisticwindow.h"
 #include "./ui_mainwindow.h"
-#include "carddelegate.h"
 #include "add_workout.h" // Инклюд окна
+
 #include <QSqlQuery> // Для QSqlQuery
 #include <QSqlError> // Для QSqlError
 #include <QStandardItemModel>
 #include <QMessageBox>  // Для отображения описания
-#include "cardwidget.h"  // Добавьте эту строку
+
+#include "cardwidget.h"
+
 #include <QTextCharFormat>
 
 
@@ -16,8 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    CardWidget *card = new CardWidget("Заголовок", "Описание", this);
-
+    CardWidget *card = new CardWidget(45,"Заголовок", "Описание", this);
+    connect(card, &CardWidget::requestListViewUpdate, this, &MainWindow::ListViewUpdate);
     // Создаём item
     QListWidgetItem *item = new QListWidgetItem(ui->listWidget_notes);
     item->setSizeHint(card->sizeHint());
@@ -27,20 +30,13 @@ MainWindow::MainWindow(QWidget *parent)
     ui->listWidget_notes->setItemWidget(item, card);
 
 
+
+    ui->calendarWidget->setVerticalHeaderFormat(QCalendarWidget::NoVerticalHeader); // отключить отображение номеров недель в QCalendarWidget
+
+
     // Загружаем данные из базы данных
     loadTrainingsFromDB();
-
-
     updateCalendarTraining();
-
-/*
-    // Настройки для listView_note
-    ui->listView_note->setSpacing(10);
-    ui->listView_note->setViewMode(QListView::IconMode);
-
-    // Установка делегата для кастомного отображения
-    ui->listView_note->setItemDelegate(new CardDelegate(this));
-*/
 
     // Соединяем сигнал clicked с вашим слотом onCardClicked
     //connect(ui->listView_note, &QListView::clicked, this, &MainWindow::onCardClicked);
@@ -50,39 +46,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->listWidget_notes->setSelectionMode(QAbstractItemView::NoSelection);
     ui->listWidget_notes->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
 
-
-    /*
-    QCalendarWidget *calendar = ui->calendarWidget;
-    QSqlQuery query("SELECT date, description FROM trainings");
-    while (query.next()) {
-        QString rawDate = query.value("date").toString();
-        QString description = query.value("description").toString().toLower().trimmed();
-        QDate date = QDate::fromString(rawDate, "dd.MM.yyyy"); // Или укажи свой формат!
-
-        qDebug() << "Сырые данные:" << rawDate << "| Полученная дата:" << date << "| Описание:" << description;
-
-        if (!date.isValid())
-            continue;
-
-
-        QColor color; // какой цвет подсветки?
-        if (description == "спина")
-            color = Qt::green;
-        else if (description == "грудь"){
-            color = Qt::blue;
-            printf("Good");
-
-        }
-        else
-            printf("Not good");
-        // Настраиваем формат для даты
-        QTextCharFormat format;
-        format.setBackground(color);
-
-        // Применяем к календарю для этой даты
-        calendar->setDateTextFormat(date, format);
-    }
-*/
 }
 
 MainWindow::~MainWindow()
@@ -92,41 +55,26 @@ MainWindow::~MainWindow()
     // model очищается автоматически благодаря своей привязке к родительскому объекту
 }
 
-
-void MainWindow::addTestCard() {
-    // Создаем тестовые данные
-    QString testDate = "01.01.2025";
-    QString testDescription = "Тестовое описание";
-
-    // Создаем элемент модели
-    QStandardItem *item = new QStandardItem(testDate);
-    item->setData(testDescription, Qt::UserRole + 1);
-
-    // Добавляем элемент в модель
-    model->appendRow(item);
-
-    // Связываем модель с видом
-    ui->listView_note->setModel(model);
-
-    qDebug() << "Тестовая карточка добавлена!";
-}
-
 void MainWindow::updateCalendarTraining(){ // Функция по окрашиванию дней в календаре в зависимости от типа тренировки
     ui->calendarWidget->setDateTextFormat(QDate(), QTextCharFormat()); // Cнимаем все подсветки: необязательно, но иногда нужно
     QSqlQuery query("SELECT date, description FROM trainings");
     while (query.next()) {
+        //QString rawDate = query.value("date").toString();
+        //QDate date = QDate::fromString(rawDate, "dd.MM.yyyy");
         QString rawDate = query.value("date").toString();
-        QDate date = QDate::fromString(rawDate, "dd.MM.yyyy");
+        QDate date = query.value("date").toDate();
         if (!date.isValid()) continue;
         QString desc = query.value("description").toString().toLower().trimmed();
 
         QColor color;
         if (desc == "спина")
-            color = Qt::green;
+            color = QColor(144, 238, 144);  // светло-зелёный (LightGreen)
         else if (desc == "грудь")
-            color = Qt::blue;
+            color = QColor(100, 149, 237);  // голубой (CornflowerBlue)
         else if (desc == "ноги")
-            color = Qt::yellow;
+            color = QColor(255, 255, 153);  // светло-жёлтый (LightYellow)
+        else if (desc == "кардио")
+            color = QColor(255, 192, 203); // розовый (Pink)
         else
             continue;
         QTextCharFormat fmt;
@@ -136,29 +84,61 @@ void MainWindow::updateCalendarTraining(){ // Функция по окрашив
 }
 
 void MainWindow::loadTrainingsFromDB() {
-    QSqlQuery query("SELECT exercises, description FROM trainings");
+    QSqlQuery query("SELECT id, date, exercises, description FROM trainings ORDER BY date ASC");
 
     if (!query.exec()) {
         qDebug() << "Ошибка при запросе к базе данных: " << query.lastError();
         return;
     }
 
-    ui->listWidget_notes->clear();  // Очищаем список перед добавлением
+    ui->listWidget_notes->clear();
 
     while (query.next()) {
+        int id = query.value("id").toInt();
         QString title = query.value("exercises").toString();
-        QString description = query.value("description").toString();
+        QString date = query.value("date").toString();
+        QString baseDescription = query.value("description").toString();
+        title += " (" + date + ", "+baseDescription+ ")";
 
-        // Создаём карточку
-        CardWidget *card = new CardWidget(title, description, this);
+        // Подзапрос в таблицу `exercise` для этого тренинга
+        QSqlQuery exerciseQuery;
+        exerciseQuery.prepare("SELECT title, group_muscle,work_weight, numb_try, numb_repit FROM exercise WHERE training_id = :id");
+        exerciseQuery.bindValue(":id", id);
+
+        QStringList exerciseDescriptions;
+
+        if (!exerciseQuery.exec()) {
+            qDebug() << "Ошибка при запросе к exercise: " << exerciseQuery.lastError();
+        } else {
+            while (exerciseQuery.next()) {
+                QString titleEx = exerciseQuery.value("title").toString();
+                QString group = exerciseQuery.value("group_muscle").toString();
+                double work_weight = exerciseQuery.value("work_weight").toDouble();
+                int tries = exerciseQuery.value("numb_try").toInt();
+                int reps = exerciseQuery.value("numb_repit").toInt();
+
+                QString line = QString(" %1 (%2) — %5кг — %3x%4")
+                                   .arg(titleEx).arg(group).arg(tries).arg(reps).arg(work_weight);
+                exerciseDescriptions << line;
+            }
+        }
+
+        //QString line = ex.title + " (" + ex.group_muscle + ") — " +
+         //              QString::number(ex.numb_try) + "x" + QString::number(ex.numb_repit)
+
+
+        // Формируем итоговое описание
+        QString Description ="Упражнения:\n" + exerciseDescriptions.join("\n");
+
+        // Создание карточки
+        CardWidget *card = new CardWidget(id, title, Description, this);
+        connect(card, &CardWidget::requestListViewUpdate, this, &MainWindow::ListViewUpdate);
 
         QListWidgetItem *item = new QListWidgetItem(ui->listWidget_notes);
         item->setSizeHint(card->sizeHint());
-
         ui->listWidget_notes->addItem(item);
         ui->listWidget_notes->setItemWidget(item, card);
 
-        // Обновляем размер при раскрытии
         connect(card, &CardWidget::sizeChanged, this, [=]() {
             item->setSizeHint(card->sizeHint());
         });
@@ -176,6 +156,17 @@ void MainWindow::on_pushButton_addnote_clicked()
     updateCalendarTraining();
 }
 
+void MainWindow::ListViewUpdate(){
 
+    qDebug()<<"Тут нет ошибки";
+    loadTrainingsFromDB();  // Перезагрузить данные после добавления новой записи
+    updateCalendarTraining();
+}
 
+void MainWindow::on_pushButton_checkStatistic_clicked() // ОТкрытие окна со статистикой
+{
+    StatisticWindow window;
+    window.setModal(true);
+    window.exec();
+}
 

@@ -48,7 +48,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         insert_complex.h insert_complex.cpp insert_complex.ui
         models.h models.cpp
         cardwidget.h cardwidget.cpp
-        carddelegate.h carddelegate.cpp
+        statisticwindow.h statisticwindow.cpp statisticwindow.ui
+        statisticwindow.h statisticwindow.cpp statisticwindow.ui
+
+
     )
 else()
     add_executable(sigma-boy ${PROJECT_SOURCES})

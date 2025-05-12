@@ -22,8 +22,8 @@ public:
 private slots:
 
     void on_pushButton_addnote_clicked();
-    //void onCardClicked(const QModelIndex &index);  // Объявляем слот
 
+    void on_pushButton_checkStatistic_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -35,5 +35,7 @@ private:
 
 public:   void loadTrainingsFromDB();
     void updateCalendarTraining();
+public slots:
+    void ListViewUpdate();
 };
 #endif // MAINWINDOW_H

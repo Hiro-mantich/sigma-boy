@@ -247,7 +247,6 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qlatin1stringview.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qline.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qlist.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qlocale.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qlogging.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qmalloc.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qmap.h \
@@ -269,7 +268,6 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qpropertyanimation.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qrect.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qrefcount.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qregularexpression.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qscopedpointer.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qscopeguard.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtCore/qset.h \
@@ -349,7 +347,6 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtguiexports.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtguiglobal.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qtransform.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qvalidator.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qwindowdefs.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtGui/qwindowdefs_win.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QDialog \
@@ -357,13 +354,9 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QLabel \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QMainWindow \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QPushButton \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QStyledItemDelegate \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QVBoxLayout \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/QWidget \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qabstractbutton.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qabstractitemdelegate.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qabstractslider.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qabstractspinbox.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qboxlayout.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qdialog.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qframe.h \
@@ -373,13 +366,7 @@ sigma-boy_autogen/timestamp: \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qlayoutitem.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qmainwindow.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qpushbutton.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qrubberband.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qsizepolicy.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qslider.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qstyle.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qstyleditemdelegate.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qstyleoption.h \
-	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtabbar.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtabwidget.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtwidgets-config.h \
 	D:/SOFT/MSYS2/mingw64/include/qt6/QtWidgets/qtwidgetsexports.h \
@@ -648,8 +635,6 @@ sigma-boy_autogen/timestamp: \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/3.31.4/CMakeRCCompiler.cmake \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/CMakeFiles/3.31.4/CMakeSystem.cmake \
 	D:/qt-project/sigma-boy/build/6_8_0_mingw64_w64_static-Debug/sigma-boy_autogen/moc_predefs.h \
-	D:/qt-project/sigma-boy/carddelegate.cpp \
-	D:/qt-project/sigma-boy/carddelegate.h \
 	D:/qt-project/sigma-boy/cardwidget.cpp \
 	D:/qt-project/sigma-boy/cardwidget.h \
 	D:/qt-project/sigma-boy/insert_complex.cpp \
@@ -659,7 +644,10 @@ sigma-boy_autogen/timestamp: \
 	D:/qt-project/sigma-boy/mainwindow.h \
 	D:/qt-project/sigma-boy/models.cpp \
 	D:/qt-project/sigma-boy/models.h \
+	D:/qt-project/sigma-boy/statisticwindow.cpp \
+	D:/qt-project/sigma-boy/statisticwindow.h \
 	D:/qt-project/sigma-boy/add_workout.ui \
 	D:/qt-project/sigma-boy/insert_complex.ui \
 	D:/qt-project/sigma-boy/mainwindow.ui \
+	D:/qt-project/sigma-boy/statisticwindow.ui \
 	D:/SOFT/MSYS2/mingw64/bin/cmake.exe

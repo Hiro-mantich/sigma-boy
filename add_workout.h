@@ -30,6 +30,7 @@ private:
     struct ExerciseData {
         QString title;
         QString group_muscle;
+        double work_weight;
         int numb_try;
         int numb_repit;
     };
@@ -37,6 +38,7 @@ private:
 public slots:
     void slotExerciseAdd(const QString& title,
                          const QString& group_muscle,
+                         double work_weight,
                          int numb_try,
                          int numb_repit);
 

@@ -44,6 +44,7 @@ static constexpr auto qt_meta_stringdata_ZN11add_workoutE = QtMocHelpers::string
     "slotExerciseAdd",
     "title",
     "group_muscle",
+    "work_weight",
     "numb_try",
     "numb_repit"
 );
@@ -67,12 +68,12 @@ Q_CONSTINIT static const uint qt_meta_data_ZN11add_workoutE[] = {
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
        1,    0,   32,    2, 0x08,    1 /* Private */,
        3,    0,   33,    2, 0x08,    2 /* Private */,
-       4,    4,   34,    2, 0x0a,    3 /* Public */,
+       4,    5,   34,    2, 0x0a,    3 /* Public */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Int,    5,    6,    7,    8,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Double, QMetaType::Int, QMetaType::Int,    5,    6,    7,    8,    9,
 
        0        // eod
 };
@@ -94,6 +95,7 @@ Q_CONSTINIT const QMetaObject add_workout::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
+        QtPrivate::TypeAndForceComplete<double, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>
     >,
@@ -107,7 +109,7 @@ void add_workout::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
         case 1: _t->on_pushButton_2_clicked(); break;
-        case 2: _t->slotExerciseAdd((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4]))); break;
+        case 2: _t->slotExerciseAdd((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<double>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5]))); break;
         default: ;
         }
     }

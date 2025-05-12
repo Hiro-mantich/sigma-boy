@@ -42,6 +42,7 @@ static constexpr auto qt_meta_stringdata_ZN14insert_complexE = QtMocHelpers::str
     "",
     "title",
     "group_muscle",
+    "work_weight",
     "numb_try",
     "numb_repit",
     "on_pushButton_add_clicked"
@@ -64,13 +65,13 @@ Q_CONSTINIT static const uint qt_meta_data_ZN14insert_complexE[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    4,   26,    2, 0x06,    1 /* Public */,
+       1,    5,   26,    2, 0x06,    1 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       7,    0,   35,    2, 0x08,    6 /* Private */,
+       8,    0,   37,    2, 0x08,    7 /* Private */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Int,    3,    4,    5,    6,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::Int, QMetaType::Int, QMetaType::Int,    3,    4,    5,    6,    7,
 
  // slots: parameters
     QMetaType::Void,
@@ -93,6 +94,7 @@ Q_CONSTINIT const QMetaObject insert_complex::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
         QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'on_pushButton_add_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
@@ -104,7 +106,7 @@ void insert_complex::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     auto *_t = static_cast<insert_complex *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->signalExerciseAdd((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4]))); break;
+        case 0: _t->signalExerciseAdd((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[4])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[5]))); break;
         case 1: _t->on_pushButton_add_clicked(); break;
         default: ;
         }
@@ -112,7 +114,7 @@ void insert_complex::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
     if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _q_method_type = void (insert_complex::*)(const QString & , const QString & , int , int );
+            using _q_method_type = void (insert_complex::*)(const QString & , const QString & , int , int , int );
             if (_q_method_type _q_method = &insert_complex::signalExerciseAdd; *reinterpret_cast<_q_method_type *>(_a[1]) == _q_method) {
                 *result = 0;
                 return;
@@ -153,9 +155,9 @@ int insert_complex::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void insert_complex::signalExerciseAdd(const QString & _t1, const QString & _t2, int _t3, int _t4)
+void insert_complex::signalExerciseAdd(const QString & _t1, const QString & _t2, int _t3, int _t4, int _t5)
 {
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))) };
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t4))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t5))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

@@ -14,6 +14,13 @@ add_workout::add_workout(QWidget *parent)
     exerciseModel = new QStringListModel(this);
     ui->listView_exercises->setModel(exerciseModel);
 
+
+    // Устанавливаем текущую дату и время в QDateEdit
+    ui->dateEdit->setDateTime(QDateTime::currentDateTime());
+
+
+    // Запрещаем редактирование
+    ui->listView_exercises->setEditTriggers(QAbstractItemView::NoEditTriggers);
 }
 
 add_workout::~add_workout()
@@ -23,7 +30,7 @@ add_workout::~add_workout()
 
 
 // Создание записи о тренировке
-int addTrainingRecord(const QString& date, const QString& description, const QString& exercises){
+int addTrainingRecord(const QDate& date, const QString& description, const QString& exercises){
     QSqlQuery query;
 
     query.prepare("INSERT INTO trainings (date, description, exercises) "
@@ -41,16 +48,17 @@ int addTrainingRecord(const QString& date, const QString& description, const QSt
 }
 
 // Создание записи об упражнении
-bool addExerciseRecord(const QString& title, const QString& group_muscle, int numb_try, int numb_repit, int training_id){
+bool addExerciseRecord(const QString& title, const QString& group_muscle, double work_weight, int numb_try, int numb_repit, int training_id){
     QSqlQuery query;
 
     // Подготовка SQL-запроса для вставки данных
-    query.prepare("INSERT INTO exercise (title, group_muscle, numb_try, numb_repit, training_id) "
-                  "VALUES (:title, :group_muscle, :numb_try, :numb_repit, :training_id)");
+    query.prepare("INSERT INTO exercise (title, group_muscle, work_weight, numb_try, numb_repit, training_id) "
+                  "VALUES (:title, :group_muscle,:work_weight, :numb_try, :numb_repit, :training_id)");
 
     // Привязка значений к параметрам
     query.bindValue(":title", title);
     query.bindValue(":group_muscle", group_muscle);
+    query.bindValue(":work_weight", work_weight);
     query.bindValue(":numb_try", numb_try);
     query.bindValue(":numb_repit", numb_repit);
     query.bindValue(":training_id", training_id);
@@ -66,8 +74,8 @@ bool addExerciseRecord(const QString& title, const QString& group_muscle, int nu
 void add_workout::on_pushButton_clicked() // Обработчик события + (создание записи о тренировке)
 {
     // Получаем данные из текстовых полей
-    QString date = ui->dateEdit->text();
-    QString description = ui->lineEdit_Description->text();
+    QDate date = ui->dateEdit->date();
+    QString description = ui->comboBox_Description->currentText();
     QString exercises = ui->lineEdit_2->text();
 
     /*
@@ -87,14 +95,14 @@ void add_workout::on_pushButton_clicked() // Обработчик события
 
     if (newId != -1) {
         out_id = newId;
-        QMessageBox::information(this, "Успех", "Запись о тренировке добавлена!");
+        //QMessageBox::information(this, "Успех", "Запись о тренировке добавлена!");
     } else {
-        QMessageBox::warning(this, "Ошибка", "Не удалось добавить запись в базу данных.");
+        //QMessageBox::warning(this, "Ошибка", "Не удалось добавить запись в базу данных.");
         return;
     }
 
     for (const auto& ex : exerciseList) {
-        bool exSaved = addExerciseRecord(ex.title, ex.group_muscle, ex.numb_try, ex.numb_repit, out_id);
+        bool exSaved = addExerciseRecord(ex.title, ex.group_muscle, ex.work_weight, ex.numb_try, ex.numb_repit, out_id);
         if (!exSaved) {
             QMessageBox::warning(this, "Ошибка", "Не удалось сохранить одно из упражнений.");
             return;
@@ -115,15 +123,15 @@ void add_workout::on_pushButton_2_clicked()
 
 }
 
-void add_workout::slotExerciseAdd(const QString &title, const QString &group_muscle, int numb_try, int numb_repit) // Слот для принятия данных из insert_complex
+void add_workout::slotExerciseAdd(const QString &title, const QString &group_muscle, double work_weight, int numb_try, int numb_repit) // Слот для принятия данных из insert_complex
 {
-    ExerciseData data{title, group_muscle, numb_try, numb_repit};
+    ExerciseData data{title, group_muscle, work_weight, numb_try, numb_repit};
     exerciseList.append(data);
 
     // Обновляем отображение на форме
     QStringList list;
     for (const auto& ex : exerciseList) {
-        QString line = ex.title + " (" + ex.group_muscle + ") — " +
+        QString line = ex.title + " (" + ex.group_muscle + ") — " +QString::number(ex.work_weight)+ "кг — "+
                        QString::number(ex.numb_try) + "x" + QString::number(ex.numb_repit);
         list << line;
     }

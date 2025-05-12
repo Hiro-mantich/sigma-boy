@@ -29,8 +29,7 @@
     <bool>false</bool>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-background-color: rgb(169, 169, 169);</string>
+    <string notr="true">background-color: rgb(64, 65, 66);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Shape::StyledPanel</enum>
@@ -38,194 +37,387 @@ background-color: rgb(169, 169, 169);</string>
    <property name="frameShadow">
     <enum>QFrame::Shadow::Raised</enum>
    </property>
-   <widget class="QLabel" name="label">
+   <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>550</width>
-      <height>100</height>
+      <x>10</x>
+      <y>10</y>
+      <width>530</width>
+      <height>530</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>16</pointsize>
-      <bold>false</bold>
-     </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(169, 169, 169);</string>
+     <string notr="true">background-color: rgb(91, 92, 93);</string>
     </property>
-    <property name="text">
-     <string>Создание записи о новой тренировке</string>
+    <property name="title">
+     <string>Создание записи о тренировке</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignmentFlag::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>190</y>
-      <width>231</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Основная группа мышц</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>150</x>
-      <y>460</y>
-      <width>261</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Добавить тренировку</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>470</x>
-      <y>380</y>
-      <width>31</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>30</pointsize>
-      <stylestrategy>PreferDefault</stylestrategy>
-     </font>
-    </property>
-    <property name="text">
-     <string>+</string>
-    </property>
-    <property name="iconSize">
-     <size>
-      <width>20</width>
-      <height>20</height>
-     </size>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>190</y>
-      <width>121</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QListView" name="listView_exercises">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>240</y>
-      <width>371</width>
-      <height>191</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>140</y>
-      <width>266</width>
-      <height>35</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label_3">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Заголовок</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEdit_Description">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>40</x>
-      <y>90</y>
-      <width>176</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Дата</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QDateEdit" name="dateEdit">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="dateTime">
-        <datetime>
-         <hour>0</hour>
-         <minute>0</minute>
-         <second>0</second>
-         <year>2025</year>
-         <month>4</month>
-         <day>1</day>
-        </datetime>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <widget class="QListView" name="listView_exercises">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>250</y>
+       <width>491</width>
+       <height>191</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QListView {
+    /* Основные параметры */
+    background-color: #cecece;               /* Белый фон для лучшего контраста */
+    border: 1px solid #CFD8DC;              /* Граница цвета &quot;серебристый туман&quot; */
+    border-radius: 8px;                     /* Более плавные закругления */
+    padding: 6px;
+    font-family: 'Segoe UI', system-ui;      /* Более современный стек шрифтов */
+    font-size: 15px;                        /* Увеличенный размер */
+    font-weight: 500;                       /* Полужирный для лучшей читаемости */
+    color: #263238;                         /* Глубокий сине-серый цвет текста */
+    outline: none;
+    alternate-background-color: #F8F9FA;     /* Очень светлый серый для чередования */
+}
+
+/* Стиль элементов списка */
+QListView::item {
+    height: 36px;                           /* Увеличенная высота */
+    padding: 8px 12px;                      /* Больше внутренних отступов */
+    border-bottom: 1px solid #ECEFF1;       /* Более тонкий разделитель */
+    margin: 2px 0;                          /* Отступ между элементами */
+}
+
+/* Состояние при наведении */
+QListView::item:hover {
+    background-color: #E1F5FE;              /* Светло-голубой с оттенком */
+    color: #0277BD;                        /* Насыщенный синий */
+    font-weight: 600;                      /* Еще более жирный при наведении */
+    border-left: 3px solid #42A5F5;        /* Акцентная полоса слева */
+    padding-left: 9px;                     /* Компенсация для полосы */
+}
+
+
+/* Полоса прокрутки - современный дизайн */
+QScrollBar:vertical {
+    border: none;
+    background: #F5F5F5;
+    width: 12px;
+    margin: 0px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #90A4AE;                   /* Серо-голубой ползунок */
+    border-radius: 6px;
+    min-height: 30px;
+    border: 2px solid #F5F5F5;            /* Граница для контраста */
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #78909C;                   /* Темнее при наведении */
+}
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: none;
+}
+
+/* Эффект при нажатии */
+QListView::item:pressed {
+    background-color: #0288D1;
+    color: white;
+    transform: translateY(1px);
+}</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>445</x>
+       <y>375</y>
+       <width>55</width>
+       <height>55</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <bold>true</bold>
+       <stylestrategy>PreferDefault</stylestrategy>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #4CAF50;          /* Основной зеленый */
+    border: 2px solid #388E3C;         /* Темно-зеленая граница */
+    border-radius: 8px;                /* Закругление углов */
+    color: white;
+    font-size: 24px;                   /* Увеличиваем размер &quot;+&quot; */
+    font-weight: bold;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0px;
+    margin: 2px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;          /* Светло-зеленый при наведении */
+    border-color: #4CAF50;
+}
+
+QPushButton:pressed {
+    background-color: #2E7D32;         /* Темно-зеленый при нажатии */
+    border-color: #1B5E20;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>icons/icons8-strength-100.png</normaloff>icons/icons8-strength-100.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>45</width>
+       <height>45</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>455</y>
+       <width>300</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="tabletTracking">
+      <bool>false</bool>
+     </property>
+     <property name="focusPolicy">
+      <enum>Qt::FocusPolicy::StrongFocus</enum>
+     </property>
+     <property name="contextMenuPolicy">
+      <enum>Qt::ContextMenuPolicy::DefaultContextMenu</enum>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::LeftToRight</enum>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: #4CAF50;          /* Основной зеленый */
+    border: 2px solid #388E3C;         /* Темно-зеленая граница */
+    border-radius: 8px;                /* Закругление углов */
+    color: white;
+    font-size: 24px;                   /* Увеличиваем размер &quot;+&quot; */
+    font-weight: bold;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0px;
+    margin: 2px;
+}
+
+QPushButton:hover {
+    background-color: #66BB6A;          /* Светло-зеленый при наведении */
+    border-color: #4CAF50;
+}
+
+QPushButton:pressed {
+    background-color: #2E7D32;         /* Темно-зеленый при нажатии */
+    border-color: #1B5E20;
+}</string>
+     </property>
+     <property name="text">
+      <string>Добавить тренировку</string>
+     </property>
+    </widget>
+    <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>40</y>
+       <width>491</width>
+       <height>201</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(206, 206, 206);
+border-radius: 8px;</string>
+          </property>
+          <property name="text">
+           <string>Дата</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 8px;</string>
+          </property>
+          <property name="calendarPopup">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLineEdit" name="lineEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(206, 206, 206);
+border-radius: 8px;</string>
+          </property>
+          <property name="text">
+           <string>Основная группа мышц</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox_Description">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="tabletTracking">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 8px;</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Спина</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>icons/icons8-green-circle-96.png</normaloff>icons/icons8-green-circle-96.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Грудь</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>icons/icons8-blue-circle-96.png</normaloff>icons/icons8-blue-circle-96.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Ноги</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>icons/icons8-yellow-circle-96.png</normaloff>icons/icons8-yellow-circle-96.png</iconset>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Кардио</string>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>icons/icons8-run-100.png</normaloff>icons/icons8-run-100.png</iconset>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(206, 206, 206);
+border-radius: 8px;</string>
+          </property>
+          <property name="text">
+           <string>Заметка</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineEdit_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>13</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 8px;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
    </widget>
   </widget>
  </widget>
