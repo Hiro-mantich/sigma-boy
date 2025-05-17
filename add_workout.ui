@@ -64,7 +64,7 @@
      <property name="styleSheet">
       <string notr="true">QListView {
     /* Основные параметры */
-    background-color: #cecece;               /* Белый фон для лучшего контраста */
+    background-color: #dbdbdb;              
     border: 1px solid #CFD8DC;              /* Граница цвета &quot;серебристый туман&quot; */
     border-radius: 8px;                     /* Более плавные закругления */
     padding: 6px;
@@ -78,6 +78,8 @@
 
 /* Стиль элементов списка */
 QListView::item {
+	border-radius: 8;
+	background-color: #fff;			 /*  */
     height: 36px;                           /* Увеличенная высота */
     padding: 8px 12px;                      /* Больше внутренних отступов */
     border-bottom: 1px solid #ECEFF1;       /* Более тонкий разделитель */
@@ -253,13 +255,22 @@ QPushButton:pressed {
          <widget class="QLabel" name="label_2">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
-            <bold>false</bold>
+            <family>Segoe UI</family>
+            <pointsize>-1</pointsize>
+            <fontweight>Medium</fontweight>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(206, 206, 206);
-border-radius: 8px;</string>
+           <string notr="true">    background-color: #dbdbdb;              
+    border: 1px solid #CFD8DC;              /* Граница цвета &quot;серебристый туман&quot; */
+    border-radius: 8px;                     /* Более плавные закругления */
+    padding: 6px;
+    font-family: 'Segoe UI', system-ui;      /* Более современный стек шрифтов */
+    font-size: 20px;                        /* Увеличенный размер */
+    font-weight: 500;                       /* Полужирный для лучшей читаемости */
+    color: #263238;                         /* Глубокий сине-серый цвет текста */
+    outline: none;
+    alternate-background-color: #F8F9FA;     /* Очень светлый серый для чередования */</string>
           </property>
           <property name="text">
            <string>Дата</string>
@@ -302,12 +313,22 @@ border-radius: 8px;</string>
           </property>
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>Segoe UI</family>
+            <pointsize>-1</pointsize>
+            <fontweight>Medium</fontweight>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(206, 206, 206);
-border-radius: 8px;</string>
+           <string notr="true">    background-color: #dbdbdb;              
+    border: 1px solid #CFD8DC;              /* Граница цвета &quot;серебристый туман&quot; */
+    border-radius: 8px;                     /* Более плавные закругления */
+    padding: 6px;
+    font-family: 'Segoe UI', system-ui;      /* Более современный стек шрифтов */
+    font-size: 20px;                        /* Увеличенный размер */
+    font-weight: 500;                       /* Полужирный для лучшей читаемости */
+    color: #263238;                         /* Глубокий сине-серый цвет текста */
+    outline: none;
+    alternate-background-color: #F8F9FA;     /* Очень светлый серый для чередования */</string>
           </property>
           <property name="text">
            <string>Основная группа мышц</string>
@@ -334,6 +355,11 @@ border-radius: 8px;</string>
            <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 8px;</string>
           </property>
+          <item>
+           <property name="text">
+            <string>Фулбади</string>
+           </property>
+          </item>
           <item>
            <property name="text">
             <string>Спина</string>
@@ -380,12 +406,22 @@ border-radius: 8px;</string>
          <widget class="QLabel" name="label_3">
           <property name="font">
            <font>
-            <pointsize>12</pointsize>
+            <family>Segoe UI</family>
+            <pointsize>-1</pointsize>
+            <fontweight>Medium</fontweight>
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(206, 206, 206);
-border-radius: 8px;</string>
+           <string notr="true">    background-color: #dbdbdb;              
+    border: 1px solid #CFD8DC;              /* Граница цвета &quot;серебристый туман&quot; */
+    border-radius: 8px;                     /* Более плавные закругления */
+    padding: 6px;
+    font-family: 'Segoe UI', system-ui;      /* Более современный стек шрифтов */
+    font-size: 20px;                        /* Увеличенный размер */
+    font-weight: 500;                       /* Полужирный для лучшей читаемости */
+    color: #263238;                         /* Глубокий сине-серый цвет текста */
+    outline: none;
+    alternate-background-color: #F8F9FA;     /* Очень светлый серый для чередования */</string>
           </property>
           <property name="text">
            <string>Заметка</string>

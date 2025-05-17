@@ -205,7 +205,7 @@ public:
 "}"));
         frame_bot = new QFrame(centralwidget);
         frame_bot->setObjectName("frame_bot");
-        frame_bot->setGeometry(QRect(0, 550, 550, 450));
+        frame_bot->setGeometry(QRect(0, 550, 550, 531));
         frame_bot->setStyleSheet(QString::fromUtf8("background-color: #808080;\n"
 "background-color: #e0f8e0;\n"
 "background-color: #a8d5a8;"));
@@ -213,7 +213,7 @@ public:
         frame_bot->setFrameShadow(QFrame::Shadow::Raised);
         listWidget_notes = new QListWidget(frame_bot);
         listWidget_notes->setObjectName("listWidget_notes");
-        listWidget_notes->setGeometry(QRect(15, 34, 520, 401));
+        listWidget_notes->setGeometry(QRect(15, 34, 520, 411));
         listWidget_notes->setStyleSheet(QString::fromUtf8("QListView {\n"
 "    /* \320\236\321\201\320\275\320\276\320\262\320\275\321\213\320\265 \320\277\320\260\321\200\320\260\320\274\320\265\321\202\321\200\321\213 */\n"
 "    background-color: #dbdbdb;              \n"
@@ -285,7 +285,12 @@ public:
                         " #0288D1;\n"
 "    color: white;\n"
 "    transform: translateY(1px);\n"
-"}"));
+"}\n"
+"\n"
+"\n"
+" QScrollBar:horizontal { height: 0px; }\n"
+"  \n"
+""));
         label_2 = new QLabel(frame_bot);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(20, 0, 191, 31));
@@ -359,7 +364,10 @@ public:
 "    background-color: #2E7D32;         /* \320\242\320\265\320\274\320\275\320\276-\320\267\320\265\320\273\320\265\320\275\321\213\320\271 \320\277\321\200\320\270 \320\275\320\260\320\266\320\260\321\202\320\270\320\270 */\n"
 "    border-color: #1B5E20;\n"
 "}"));
-        pushButton_checkStatistic->setIconSize(QSize(60, 60));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("icons/icons8-accomplishments-68.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        pushButton_checkStatistic->setIcon(icon1);
+        pushButton_checkStatistic->setIconSize(QSize(50, 60));
         MainWindow->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -376,7 +384,7 @@ public:
         label->setText(QCoreApplication::translate("MainWindow", "\320\232\320\260\320\273\320\265\320\275\320\264\320\260\321\200\321\214 \321\202\321\200\320\265\320\275\320\270\321\200\320\276\320\262\320\276\320\272", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "\320\241\320\277\320\270\321\201\320\276\320\272 \321\202\321\200\320\265\320\275\320\270\321\200\320\276\320\262\320\276\320\272", nullptr));
         pushButton_addnote->setText(QString());
-        pushButton_checkStatistic->setText(QCoreApplication::translate("MainWindow", "!", nullptr));
+        pushButton_checkStatistic->setText(QString());
     } // retranslateUi
 
 };

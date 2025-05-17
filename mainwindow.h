@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "models.h"
 #include <QStandardItemModel>
+#include "models.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

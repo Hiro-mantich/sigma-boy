@@ -1,5 +1,6 @@
 #include "add_workout.h"
 #include "ui_add_workout.h"
+
 #include <QSqlQuery> // Для QSqlQuery
 #include <QSqlError> // Для QSqlError
 #include <QMessageBox>

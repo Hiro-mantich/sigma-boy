@@ -1,4 +1,5 @@
 #include "cardwidget.h"
+
 #include <QDebug>
 #include <QGraphicsDropShadowEffect>
 #include <QPropertyAnimation>
@@ -13,7 +14,7 @@ CardWidget::CardWidget(const int &recordId, const QString &title, const QString 
     recordId(recordId),  // Инициализация члена класса из параметра конструктора
     isExpanded(false) {
 
-    setFixedWidth(490);
+    setFixedWidth(475);
     setStyleSheet("background-color: white; border-radius: 12px;");
     //setStyleSheet("QWidget { background-color: white; border-radius: 12px; }");
 
@@ -112,7 +113,7 @@ CardWidget::CardWidget(const int &recordId, const QString &title, const QString 
     mainLayout->addWidget(descriptionLabel);
 
     // Начальная высота
-    resize(490, 80);
+    resize(450, 80);
     setMinimumHeight(80);
     setMaximumHeight(160);
 
@@ -230,5 +231,5 @@ void CardWidget::setExpanded(bool expanded) {
 }
 
 QSize CardWidget::sizeHint() const {
-    return QSize(490, isExpanded ? 160 : 80);
+    return QSize(480, isExpanded ? 160 : 80);
 }

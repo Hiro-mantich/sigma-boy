@@ -19,6 +19,7 @@ public:
 private:
     Ui::StatisticWindow *ui;
     void showRecords();
+    void showNumberTrainings();
 };
 
 #endif // STATISTICWINDOW_H
