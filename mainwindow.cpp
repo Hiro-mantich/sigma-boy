@@ -13,21 +13,23 @@
 #include <QTextCharFormat>
 
 
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+
     ui->setupUi(this);
 
-    CardWidget *card = new CardWidget(45,"Заголовок", "Описание", this);
-    connect(card, &CardWidget::requestListViewUpdate, this, &MainWindow::ListViewUpdate);
+    //CardWidget *card = new CardWidget(45,"Заголовок", "Описание", this);
+    //connect(card, &CardWidget::requestListViewUpdate, this, &MainWindow::ListViewUpdate);
     // Создаём item
     QListWidgetItem *item = new QListWidgetItem(ui->listWidget_notes);
-    item->setSizeHint(card->sizeHint());
+    //item->setSizeHint(card->sizeHint());
 
     // Привязываем виджет к item
     ui->listWidget_notes->addItem(item);
-    ui->listWidget_notes->setItemWidget(item, card);
+    //ui->listWidget_notes->setItemWidget(item, card);
 
 
 
@@ -67,14 +69,16 @@ void MainWindow::updateCalendarTraining(){ // Функция по окрашив
         QString desc = query.value("description").toString().toLower().trimmed();
 
         QColor color;
-        if (desc == "спина")
-            color = QColor(144, 238, 144);  // светло-зелёный (LightGreen)
-        else if (desc == "грудь")
-            color = QColor(100, 149, 237);  // голубой (CornflowerBlue)
-        else if (desc == "ноги")
-            color = QColor(255, 255, 153);  // светло-жёлтый (LightYellow)
+        if (desc == "сплит (спина + бицепс)")
+            color = QColor(50, 205, 50);      // Ярко-зелёный (LimeGreen)
+        else if (desc == "сплит (грудь + трицепс)")
+            color = QColor(30, 144, 255);     // Ярко-синий (DodgerBlue)
+        else if (desc == "сплит (ноги)")
+            color = QColor(255, 215, 0);      // Золотой (Gold)
         else if (desc == "кардио")
-            color = QColor(255, 192, 203); // розовый (Pink)
+            color = QColor(255, 105, 180);    // Ярко-розовый (HotPink)
+        else if (desc == "фулбади")
+            color = QColor(147, 112, 219);    // Средне-фиолетовый (MediumPurple)
         else
             continue;
         QTextCharFormat fmt;
@@ -84,7 +88,23 @@ void MainWindow::updateCalendarTraining(){ // Функция по окрашив
 }
 
 void MainWindow::loadTrainingsFromDB() {
-    QSqlQuery query("SELECT id, date, exercises, description FROM trainings ORDER BY date ASC");
+    QSqlQuery query;
+
+    QString filtr = ui->comboBox_Filtr->currentText();
+
+    // Определяем запрос в зависимости от выбранного фильтра
+    if (filtr == "↕ Все") {
+        query.prepare("SELECT id, date, exercises, description FROM trainings ORDER BY date ASC");
+    }
+    else if (filtr == "↓ Будущие") {
+        query.prepare("SELECT id, date, exercises, description FROM trainings "
+                      "WHERE date >= DATE('now') ORDER BY date ASC");
+    }
+    else if (filtr == "↑ Прошедшие") {
+        query.prepare("SELECT id, date, exercises, description FROM trainings "
+                      "WHERE date < DATE('now') ORDER BY date DESC");
+    }
+
 
     if (!query.exec()) {
         qDebug() << "Ошибка при запросе к базе данных: " << query.lastError();
@@ -168,5 +188,11 @@ void MainWindow::on_pushButton_checkStatistic_clicked() // ОТкрытие ок
     StatisticWindow window;
     window.setModal(true);
     window.exec();
+}
+
+// Перезагрузить данные после смены фильтра
+void MainWindow::on_comboBox_Filtr_currentIndexChanged(int index)
+{
+    loadTrainingsFromDB();
 }
 

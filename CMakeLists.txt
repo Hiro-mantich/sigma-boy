@@ -39,6 +39,18 @@ set(PROJECT_SOURCES
     mainwindow.ui
 )
 
+
+
+if(WIN32)
+    enable_language(RC)
+    set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/file.rc")
+
+endif()
+
+
+
+
+
 # Создаем цель
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(sigma-boy
@@ -50,11 +62,16 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         cardwidget.h cardwidget.cpp
         statisticwindow.h statisticwindow.cpp statisticwindow.ui
         statisticwindow.h statisticwindow.cpp statisticwindow.ui
-
+        ${APP_ICON_RESOURCE_WINDOWS}
 
     )
 else()
     add_executable(sigma-boy ${PROJECT_SOURCES})
+endif()
+
+# Отключаем консольное окно на Windows
+if(WIN32)
+    set_target_properties(sigma-boy PROPERTIES WIN32_EXECUTABLE TRUE)
 endif()
 
 # Связываем Qt и SQLite с проектом
@@ -74,3 +91,13 @@ install(TARGETS sigma-boy
 if(${QT_VERSION_MAJOR} EQUAL 6)
     qt_finalize_executable(sigma-boy)
 endif()
+
+
+
+# Копируем папку icons в папку сборки (build)
+add_custom_command(
+    TARGET sigma-boy POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${CMAKE_SOURCE_DIR}/icons"
+            "$<TARGET_FILE_DIR:sigma-boy>/icons"
+)

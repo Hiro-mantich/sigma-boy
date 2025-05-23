@@ -166,8 +166,8 @@ QListView::item:pressed {
      <rect>
       <x>10</x>
       <y>180</y>
-      <width>430</width>
-      <height>190</height>
+      <width>431</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -547,7 +547,7 @@ qproperty-alignment: 'AlignCenter';
    <zorder>listView_statistic</zorder>
    <zorder>frame</zorder>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>0</x>

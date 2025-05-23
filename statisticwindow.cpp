@@ -60,5 +60,3 @@ void StatisticWindow::showNumberTrainings()
         ui->label_all_times->setText(QString("%1").arg(total));
     }
 }
-
-
